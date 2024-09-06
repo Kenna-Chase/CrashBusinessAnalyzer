@@ -6,3 +6,8 @@ node_modules
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+!src-application/*
+src-application/package-lock.json
+src-application/node_modules
+
+.DS_Store
