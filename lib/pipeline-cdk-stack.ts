@@ -1,16 +1,30 @@
-import * as cdk from 'aws-cdk-lib';
+import { CodePipeline, CodePipelineSource, ShellStep } from 'aws-cdk-lib/pipelines';
 import { Construct } from 'constructs';
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
+import {  Stack, StackProps } from 'aws-cdk-lib';
 
-export class PipelineCdkStack extends cdk.Stack {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+/**
+ * The stack that defines the application pipeline.
+ */
+export class PipelineCdkStack extends Stack {
+  constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    // The code that defines your stack goes here
+    const pipeline = new CodePipeline(this, 'Pipeline', {
+      pipelineName: 'MyServicePipeline',
+      synth: new ShellStep('Synth', {
+        input: CodePipelineSource.gitHub('Kenna-Chase/CrashBusinessAnalyzer', 'main'),
 
-    // example resource
-    // const queue = new sqs.Queue(this, 'PipelineCdkQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
+        // Install dependencies, build and run cdk synth
+        installCommands: ['npm i -g npm@latest'],
+        commands: [
+          'npm ci',
+          'npm run build',
+          'npx cdk synth'
+        ],
+      }),
+    });
+
+    // TODO: add the application stages
+
   }
 }
