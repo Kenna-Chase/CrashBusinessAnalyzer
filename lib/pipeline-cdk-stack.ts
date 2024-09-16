@@ -26,7 +26,7 @@ export class PipelineCdkStack extends Stack {
     // The application stages
 
     // Deploy beanstalk app
-    const deployEBApp = new CdkEBStage(this, 'Alpha - Deploy EB App', {
+    const deployEBApp = new CdkEBStage(this, 'Alpha-DeployEB', {
       minSize : "1",
       maxSize : "2"
     });
