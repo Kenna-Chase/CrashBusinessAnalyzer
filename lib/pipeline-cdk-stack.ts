@@ -10,16 +10,14 @@ export class PipelineCdkStack extends Stack {
     super(scope, id, props);
 
     const pipeline = new CodePipeline(this, 'Pipeline', {
-      pipelineName: 'MyServicePipeline',
+      pipelineName: 'CrashBusinessAnalyzerPipeline',
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.gitHub('Kenna-Chase/CrashBusinessAnalyzer', 'main'),
 
         // Install dependencies, build and run cdk synth
         installCommands: ['npm i -g npm@latest'],
         commands: [
-          'npm ci',
-          'npm run build',
-          'npx cdk synth'
+          'npm install', 'npm ci', 'npm run build', 'npx cdk synth'
         ],
       }),
     });
