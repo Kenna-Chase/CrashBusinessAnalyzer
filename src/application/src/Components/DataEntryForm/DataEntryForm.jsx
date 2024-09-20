@@ -14,10 +14,18 @@ const ExpenseForm = () => {
         other_office: '',
     });
 
+    const [operatingExpenses, setOperatingExpenses] = useState({
+        employee_benefits: '',
+        compensation_insurance: '',
+        payroll_taxes: '',
+        miscellaneous: ''
+    });
+
     // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Salaries:', salaries);
+        console.log('Operating Expenses:', operatingExpenses);
     };
 
     return (
@@ -103,6 +111,75 @@ const ExpenseForm = () => {
                             onValueChange={(values) => {
                                 const {floatValue} = values;
                                 setSalaries({...salaries, supervision_office: floatValue});
+                            }}
+                        />
+                    </label>
+                </div>
+            </fieldset>
+
+            {/* Operating Expenses Section */}
+            <fieldset>
+                <legend>Operating Expenses</legend>
+                <div>
+                    <label>
+                        Employee Benefits and Welfare
+                        <NumericFormat
+                            value={operatingExpenses.employee_benefits}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
+                            onValueChange={(values) => {
+                                const {floatValue} = values;
+                                setOperatingExpenses({...operatingExpenses, employee_benefits: floatValue });
+                            }}
+                        />
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Workmen's Compensation and Insurance
+                        <NumericFormat
+                            value={operatingExpenses.compensation_insurance}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
+                            onValueChange={(values) => {
+                                const { floatValue } = values;
+                                setOperatingExpenses({ ...operatingExpenses, compensation_insurance: floatValue });
+                            }}
+                        />
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Payroll Taxes
+                        <NumericFormat
+                            value={operatingExpenses.payroll_taxes}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
+                            onValueChange={(values) => {
+                                const { floatValue } = values;
+                                setOperatingExpenses({ ...operatingExpenses, payroll_taxes: floatValue });
+                            }}
+                        />
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Miscellaneous
+                        <NumericFormat
+                            value={operatingExpenses.miscellaneous}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
+                            onValueChange={(values) => {
+                                const { floatValue } = values;
+                                setOperatingExpenses({ ...operatingExpenses, miscellaneous: floatValue });
                             }}
                         />
                     </label>
