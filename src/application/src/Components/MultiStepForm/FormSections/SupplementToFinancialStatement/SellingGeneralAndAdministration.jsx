@@ -10,6 +10,7 @@ const SellingGeneralAndAdministration = () => {
 
     return (
         <div>
+
             <fieldset>
                 <legend>Selling, General, & Administration</legend>
                 <div>
@@ -78,14 +79,15 @@ const SellingGeneralAndAdministration = () => {
                         />
                     </label>
                 </div>
+                <Button type={"default"} onClick={prev}>
+                    Back
+                </Button>
+                <Button type={"primary"} onClick={next}>
+                    Next
+                </Button>
             </fieldset>
-            <Button type={"default"} onClick={prev}>
-                Back
-            </Button>
-            <Button type={"primary"} onClick={next}>
-                Next
-            </Button>
         </div>
+
     );
 }
 export default SellingGeneralAndAdministration;

@@ -77,13 +77,13 @@ const ProductionPersonnel = () => {
                         />
                     </label>
                 </div>
+                <Button type={"default"} onClick={prev}>
+                    Back
+                </Button>
+                <Button type={"primary"} onClick={next}>
+                    Next
+                </Button>
             </fieldset>
-            <Button type={"default"} onClick={prev}>
-                Back
-            </Button>
-            <Button type={"primary"} onClick={next}>
-                Next
-            </Button>
         </div>
     );
 };

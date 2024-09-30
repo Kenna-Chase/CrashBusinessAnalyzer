@@ -12,14 +12,15 @@ const ReceivablesPayables = () => {
             <fieldset>
                 <legend>Receivables & Payables</legend>
                 <div>
-                    <label>
+
+                    <label-horizontal>
                         Technicians - Body/Frame
                         <NumericFormat
                             value={supplementToFinancialStatementStruct.productionPersonnel.technicians.bodyframe}
                             decimalScale={0}
                             fixedDecimalScale={true}
                         />
-                    </label>
+                    </label-horizontal>
                 </div>
                 <div>
                     <label>Technicians - Paint
@@ -57,13 +58,13 @@ const ReceivablesPayables = () => {
                         />
                     </label>
                 </div>
+                <Button type={"default"} onClick={prev}>
+                    Back
+                </Button>
+                <Button type={"primary"} onClick={next}>
+                    Next
+                </Button>
             </fieldset>
-            <Button type={"default"} onClick={prev}>
-                Back
-            </Button>
-            <Button type={"primary"} onClick={next}>
-                Next
-            </Button>
         </div>
     );
 };

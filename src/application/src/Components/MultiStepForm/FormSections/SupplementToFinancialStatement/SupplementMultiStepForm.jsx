@@ -3,6 +3,7 @@ import { Provider } from "./SupplementFormContext";
 import { Steps } from "antd";
 import SellingGeneralAndAdministration from "./SellingGeneralAndAdministration";
 import ProductionPersonnel from "./ProductionPersonnel";
+import ReceivablesPayables from "./ReceivablesPayables";
 
 const { Step } = Steps;
 
@@ -13,8 +14,8 @@ const renderStep = (step) => {
             return <SellingGeneralAndAdministration />;
         case 1:
             return <ProductionPersonnel />;
-        // case 2:
-        //     return <Home3 />;
+        case 2:
+             return <ReceivablesPayables />;
         default:
             return null;
     }
@@ -25,7 +26,7 @@ const SupplementMultiStepForm = () => {
     const [currentStep, setCurrentStep] = useState(0);
 
     const next = () => {
-        if (currentStep === 1) {
+        if (currentStep === 2) {
             setCurrentStep(0);
             return;
         }
@@ -38,6 +39,7 @@ const SupplementMultiStepForm = () => {
             <Steps current={currentStep}>
                 <Step title={"Selling, General, Administration"}/>
                 <Step title={"Production Personnel"}/>
+                <Step title={"Receivables & Payables"}/>
             </Steps>
             <main>{renderStep(currentStep)}</main>
         </Provider>
