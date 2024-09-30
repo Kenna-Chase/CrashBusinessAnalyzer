@@ -5,6 +5,8 @@ import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
 import Home from "./Components/Home/Home"
 import LoginSignUp from "./Components/LoginSignUp/LoginSignUp";
 import DataEntryForm from "./Components/DataEntryForm/DataEntryForm";
+import SupplementMultiStepForm
+    from "./Components/MultiStepForm/FormSections/SupplementToFinancialStatement/SupplementMultiStepForm";
 
 export default function App() {
     return (
@@ -20,6 +22,9 @@ export default function App() {
                     <li>
                         <Link to="/dataentry">Data Entry</Link>
                     </li>
+                    <li>
+                        <Link to="/supplement">Supplement Data Entry Form</Link>
+                    </li>
                 </ul>
             </div>
 
@@ -27,6 +32,7 @@ export default function App() {
                 <Route path="/dataentry" element={<DataEntryForm />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<LoginSignUp />} />
+                <Route path="/supplement" element={<SupplementMultiStepForm />} />
             </Routes>
         </BrowserRouter>
     );
