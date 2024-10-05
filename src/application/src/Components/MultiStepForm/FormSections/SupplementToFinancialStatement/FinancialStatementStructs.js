@@ -27,7 +27,7 @@ const supplementToFinancialStatementStruct = {
         prev90days: '',
         over90days: ''
     },
-    payablesStruct: {
+    payables: {
         current: '',
         prev60days: '',
         prev90days: '',

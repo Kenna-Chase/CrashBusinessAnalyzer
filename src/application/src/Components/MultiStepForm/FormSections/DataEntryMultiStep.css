@@ -67,3 +67,23 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+.horizontal-steps .ant-steps-item-finish .ant-steps-item-icon .anticon-check  {
+
+    color: white !important; /* Replace with your desired color */
+
+}
+/* Change the color of the steps circles */
+.horizontal-steps .ant-steps-item-process .ant-steps-item-icon,
+.horizontal-steps .ant-steps-item-finish .ant-steps-item-icon,
+.horizontal-steps .ant-steps-item-error .ant-steps-item-icon {
+    background-color: #ae2593 !important; /* Replace with your desired color */
+    border-color: #ae2593 !important; /* Replace with your desired color */
+}
+
+
+.horizontal-steps .ant-steps-item-finish .ant-steps-item-title::after{
+    background-color: #ae2593 !important; /* Replace with your desired color */
+    color: #ae2593 !important; /* Replace with your desired color */
+
+}

@@ -33,15 +33,21 @@ const SupplementMultiStepForm = () => {
         setCurrentStep(currentStep + 1);
     };
     const prev = () => setCurrentStep(currentStep - 1);
+    const onChange = (value) => {
+        console.log('onChange:', currentStep);
+        setCurrentStep(value);
+    };
     return (
         <Provider value={{next, prev}}>
             <h1> Supplement to Financial Statement</h1>
-            <Steps current={currentStep}>
-                <Step title={"Selling, General, Administration"}/>
-                <Step title={"Production Personnel"}/>
-                <Step title={"Receivables & Payables"}/>
-            </Steps>
-            <main>{renderStep(currentStep)}</main>
+            <div className="steps-format-container">
+                <Steps current={currentStep} type="navigation" onChange={onChange}>
+                    <Step title={"Selling, General, Administration"}/>
+                    <Step title={"Production Personnel"}/>
+                    <Step title={"Receivables & Payables"}/>
+                </Steps>
+                <main>{renderStep(currentStep)}</main>
+            </div>
         </Provider>
     );
 };
