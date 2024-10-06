@@ -33,7 +33,7 @@ const supplementToFinancialStatementStruct = {
         prev90days: '',
         over90days: ''
     },
-    hourlyRatesandStallsStruct: {
+    hourlyRatesandStalls: {
         body: {
             hourlyLaborRate: '',
             numberOfStalls: ''
