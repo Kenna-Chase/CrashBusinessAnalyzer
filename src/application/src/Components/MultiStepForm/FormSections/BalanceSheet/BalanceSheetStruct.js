@@ -43,23 +43,23 @@ const balanceSheetData = {
     },
     otherAssets: {
         netFixed: {
-            accountNumber: '',
+            accountNumber: '1690',
             value: ''
         },
         deposits: {
-            accountNumber: '',
+            accountNumber: '1710',
             value: ''
         },
         recievablesOwners: {
-            accountNumber: '',
+            accountNumber: '1730',
             value: ''
         },
         recievablesEmployees: {
-            accountNumber: '',
+            accountNumber: '1740',
             value: ''
         },
         other: {
-            accountNumber: '',
+            accountNumber: '1770',
             value: ''
         },
     },

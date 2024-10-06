@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Provider } from "./BalanceSheetFormContext";
 import {Button, Steps} from "antd";
 import CurrentAssets from "./CurrentAssets";
+import OtherAssets from "./OtherAssets";
 
 
 const { Step } = Steps;
@@ -11,8 +12,8 @@ const renderStep = (step) => {
         //Sections of the Balance Sheet Form
         case 0:
             return <CurrentAssets />;
-        // case 1:
-        //     return <OtherAssets />;
+        case 1:
+            return <OtherAssets />;
         // case 2:
         //     return <CurrentLiabilities />;
         // case 3:
