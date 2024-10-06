@@ -64,17 +64,90 @@ const balanceSheetData = {
         },
     },
     currentLiabilities: {
-        tradeCreditors: '',
-        customerDeposits: '',
-        notesPayable: '',
-        currentPortion: '',
-        accruedInterest: '',
-        accruedPayroll: '',
-        accruedANdWithHeldPayrollTax: '',
-        accruedSalesTax: '',
-        accruedIncomeTax: '',
-        accruedPropertyTax: '',
-        other: ''
+        tradeCreditors: {
+            accountNumber: '2000',
+            value: ''
+        },
+        customerDeposits: {
+            accountNumber: '2030',
+            value: ''
+        },
+        notesPayable: {
+            accountNumber: '2200',
+            value: ''
+        },
+        currentDebtPortion: {
+            accountNumber: '2260',
+            value: ''
+        },
+        accruedInterest: {
+            accountNumber: '2300',
+            value: ''
+        },
+        accruedPayroll: {
+            accountNumber: '2310',
+            value: ''
+        },
+        accruedInsurance: {
+            accountNumber: '2320',
+            value: ''
+        },
+        accruedAndWithHeldPayrollTax: {
+            accountNumber: '2330',
+            value: ''
+        },
+        accruedSalesTax: {
+            accountNumber: '2340',
+            value: ''
+        },
+        accruedIncomeTax: {
+            accountNumber: '2350',
+            value: ''
+        },
+        accruedPropertyTax: {
+            accountNumber: '2360',
+            value: ''
+        },
+        other: {
+            accountNumber: '2370',
+            value: ''
+        },
+    },
+    longTermLiabilities: {
+        notesPayable: {
+            accountNumber: '2400',
+            value: ''
+        },
+        notesPayableOfficers: {
+            accountNumber: '2410',
+            value: ''
+        },
+        other: {
+            accountNumber: '2420',
+            value: ''
+        },
+    },
+    equity: {
+        capitalStockOrInvestment: {
+            accountNumber: '2700',
+            value: ''
+        },
+        addPaidInCapital: {
+            accountNumber: '2705',
+            value: ''
+        },
+        retainedEarnings: {
+            accountNumber: '2710',
+            value: ''
+        },
+        dividendsDrawingAccount: {
+            accountNumber: '2750',
+            value: ''
+        },
+        currentYearEarnings: {
+            accountNumber: '2780',
+            value: ''
+        },
     }
 }
 export default balanceSheetData;

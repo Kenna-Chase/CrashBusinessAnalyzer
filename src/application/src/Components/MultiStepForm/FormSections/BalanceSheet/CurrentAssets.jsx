@@ -3,7 +3,6 @@ import React, {useContext} from "react";
 import balanceSheetData from "./BalanceSheetStruct";
 import {Button} from "antd";
 import BalanceSheetFormContext from "./BalanceSheetFormContext";
-import balanceSheetStruct from "./BalanceSheetStruct";
 
 const CurrentAssets = () => {
     const {next, prev } = useContext(BalanceSheetFormContext);
@@ -13,7 +12,7 @@ const CurrentAssets = () => {
                 <legend>Current Assets</legend>
                 <div>
                     <label>
-                        Cash On Hand (ACCT#:{balanceSheetStruct.currentAssets.cashOnHand.accountNumber})
+                        Cash On Hand (ACCT#:{balanceSheetData.currentAssets.cashOnHand.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.cashOnHand.value}
                             decimalScale={0}
@@ -27,7 +26,7 @@ const CurrentAssets = () => {
                 </div>
                 <div>
                     <label>
-                        Cash In Bank (ACCT#:{balanceSheetStruct.currentAssets.cashInBank.accountNumber})
+                        Cash In Bank (ACCT#:{balanceSheetData.currentAssets.cashInBank.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.cashInBank.value}
                             decimalScale={0}
@@ -41,7 +40,7 @@ const CurrentAssets = () => {
                 </div>
                 <div>
                     <label>
-                        Trade Recievables (ACCT#:{balanceSheetStruct.currentAssets.tradeRecievables.accountNumber})
+                        Trade Recievables (ACCT#:{balanceSheetData.currentAssets.tradeRecievables.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.tradeRecievables.value}
                             decimalScale={0}
@@ -56,7 +55,7 @@ const CurrentAssets = () => {
                 <div>
                     <label>
                         Allowance for Doubtful Accounts
-                        (ACCT#:{balanceSheetStruct.currentAssets.allowanceForDoubt.accountNumber})
+                        (ACCT#:{balanceSheetData.currentAssets.allowanceForDoubt.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.allowanceForDoubt.value}
                             decimalScale={0}
@@ -71,7 +70,7 @@ const CurrentAssets = () => {
                 <div>
                     <label>
                         Parts Inventory
-                        (ACCT#:{balanceSheetStruct.currentAssets.partsInventory.accountNumber})
+                        (ACCT#:{balanceSheetData.currentAssets.partsInventory.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.partsInventory.value}
                             decimalScale={0}
@@ -86,7 +85,7 @@ const CurrentAssets = () => {
                 <div>
                     <label>
                         Paint Inventory
-                        (ACCT#:{balanceSheetStruct.currentAssets.paintInventory.accountNumber})
+                        (ACCT#:{balanceSheetData.currentAssets.paintInventory.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.paintInventory.value}
                             decimalScale={0}
@@ -101,7 +100,7 @@ const CurrentAssets = () => {
                 <div>
                     <label>
                         Work In Progress Inventory
-                        (ACCT#:{balanceSheetStruct.currentAssets.workInProgressInventory.accountNumber})
+                        (ACCT#:{balanceSheetData.currentAssets.workInProgressInventory.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.workInProgressInventory.value}
                             decimalScale={0}
@@ -116,7 +115,7 @@ const CurrentAssets = () => {
                 <div>
                     <label>
                         Sublet Inventory
-                        (ACCT#:{balanceSheetStruct.currentAssets.subletInventory.accountNumber})
+                        (ACCT#:{balanceSheetData.currentAssets.subletInventory.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.subletInventory.value}
                             decimalScale={0}
@@ -131,7 +130,7 @@ const CurrentAssets = () => {
                 <div>
                     <label>
                         Prepaid Expenses
-                        (ACCT#:{balanceSheetStruct.currentAssets.prepaidExpenses.accountNumber})
+                        (ACCT#:{balanceSheetData.currentAssets.prepaidExpenses.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.prepaidExpenses.value}
                             decimalScale={0}
@@ -146,7 +145,7 @@ const CurrentAssets = () => {
                 <div>
                     <label>
                         Other
-                        (ACCT#:{balanceSheetStruct.currentAssets.other.accountNumber})
+                        (ACCT#:{balanceSheetData.currentAssets.other.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.other.value}
                             decimalScale={0}

@@ -3,6 +3,9 @@ import { Provider } from "./BalanceSheetFormContext";
 import {Button, Steps} from "antd";
 import CurrentAssets from "./CurrentAssets";
 import OtherAssets from "./OtherAssets";
+import CurrentLiabilities from "./CurrentLiabilities";
+import LongTermLiabilities from "./LongTermLiabilities";
+import Equity from "./Equity";
 
 
 const { Step } = Steps;
@@ -14,12 +17,12 @@ const renderStep = (step) => {
             return <CurrentAssets />;
         case 1:
             return <OtherAssets />;
-        // case 2:
-        //     return <CurrentLiabilities />;
-        // case 3:
-        //     return <LongtermLiabilities />;
-        // case 4:
-        //     return <Equity />;
+        case 2:
+            return <CurrentLiabilities />;
+        case 3:
+            return <LongTermLiabilities />;
+        case 4:
+            return <Equity />;
         default:
             return null;
     }

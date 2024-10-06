@@ -4,81 +4,83 @@ import balanceSheetData from "./BalanceSheetStruct";
 import {Button} from "antd";
 import BalanceSheetFormContext from "./BalanceSheetFormContext";
 
-const OtherAssets = () => {
+const Equity = () => {
     const {next, prev } = useContext(BalanceSheetFormContext);
     return (
         <div>
             <fieldset>
-                <legend>Other Assets</legend>
+                <legend> Equity</legend>
                 <div>
                     <label>
-                        Net Fixed Assets (ACCT#:{balanceSheetData.otherAssets.netFixed.accountNumber})
+                        Capital Stock | Investment
+                        (ACCT#:{balanceSheetData.equity.capitalStockOrInvestment.accountNumber})
                         <NumericFormat
-                            value={balanceSheetData.otherAssets.netFixed.value}
+                            value={balanceSheetData.equity.capitalStockOrInvestment.value}
                             decimalScale={0}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
-                                balanceSheetData.otherAssets.netFixed.value = floatValue;
+                                balanceSheetData.equity.capitalStockOrInvestment.value = floatValue;
                             }}
                         />
                     </label>
                 </div>
                 <div>
                     <label>
-                        Deposits (ACCT#:{balanceSheetData.otherAssets.deposits.accountNumber})
+                        Add Paid In Capital
+                        (ACCT#:{balanceSheetData.equity.addPaidInCapital.accountNumber})
                         <NumericFormat
-                            value={balanceSheetData.otherAssets.deposits.value}
+                            value={balanceSheetData.equity.addPaidInCapital.value}
                             decimalScale={0}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
-                                balanceSheetData.otherAssets.deposits.value = floatValue;
+                                balanceSheetData.equity.addPaidInCapital.value = floatValue;
                             }}
                         />
                     </label>
                 </div>
                 <div>
                     <label>
-                        Receivables - Owners/Officers
-                        (ACCT#:{balanceSheetData.otherAssets.recievablesOwners.accountNumber})
+                        Retained Earnings
+                        (ACCT#:{balanceSheetData.equity.retainedEarnings.accountNumber})
                         <NumericFormat
-                            value={balanceSheetData.otherAssets.recievablesOwners.value}
+                            value={balanceSheetData.equity.retainedEarnings.value}
                             decimalScale={0}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
-                                balanceSheetData.otherAssets.recievablesOwners.value = floatValue;
+                                balanceSheetData.equity.retainedEarnings.value = floatValue;
                             }}
                         />
                     </label>
                 </div>
                 <div>
                     <label>
-                        Receivables - Employees
-                        (ACCT#:{balanceSheetData.otherAssets.recievablesEmployees.accountNumber})
+                        Dividends | Drawing Account
+                        (ACCT#:{balanceSheetData.equity.dividendsDrawingAccount.accountNumber})
                         <NumericFormat
-                            value={balanceSheetData.otherAssets.recievablesEmployees.value}
+                            value={balanceSheetData.equity.dividendsDrawingAccount.value}
                             decimalScale={0}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
-                                balanceSheetData.otherAssets.recievablesEmployees.value = floatValue;
+                                balanceSheetData.equity.dividendsDrawingAccount.value = floatValue;
                             }}
                         />
                     </label>
                 </div>
                 <div>
                     <label>
-                       Other Assets
-                        (ACCT#:{balanceSheetData.otherAssets.other.accountNumber})
+                        Current Year Earnings
+                        (ACCT#:{balanceSheetData.equity.currentYearEarnings.accountNumber})
                         <NumericFormat
-                            value={balanceSheetData.otherAssets.other.value}
+                            value={balanceSheetData.equity.currentYearEarnings.value}
                             decimalScale={0}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
-                                balanceSheetData.otherAssets.other.value = floatValue;
+                                balanceSheetData.equity.currentYearEarnings.value = floatValue;
                             }}
                         />
                     </label>
@@ -94,4 +96,4 @@ const OtherAssets = () => {
         </div>
     );
 };
-export default OtherAssets;
+export default Equity;
