@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Provider } from "./SalesCostGPFormContext";
-import {Button, Steps} from "antd";
+import { Steps } from "antd";
 import Labor from "./Labor";
 import PartsAndMaterials from "./PartsAndMaterials";
 import Other from "./Other";
@@ -59,14 +59,6 @@ const BalanceSheetMultiStepForm = () => {
                     <main>{renderStep(currentStep)}</main>
                 </div>
             </Provider>
-            <Button type={"default"} onClick={prev}>
-                Back
-            </Button>
-            <Button type={"primary"} onClick={next}>
-                Next
-            </Button>
-            <br/>
-            <br/>
         </div>
 
     );

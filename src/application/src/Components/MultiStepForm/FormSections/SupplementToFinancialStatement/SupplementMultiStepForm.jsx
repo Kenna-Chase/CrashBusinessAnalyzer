@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Provider } from "./SupplementFormContext";
-import {Button, Steps} from "antd";
+import { Steps } from "antd";
 import SellingGeneralAndAdministration from "./SellingGeneralAndAdministration";
 import ProductionPersonnel from "./ProductionPersonnel";
 import ReceivablesPayables from "./ReceivablesPayables";
@@ -49,7 +49,6 @@ const SupplementMultiStepForm = () => {
     };
     return (
         <div>
-            {/*<Provider value={{overalNext, overallPrev}}>*/}
             <Provider value={{next, prev}}>
                 <h1> Supplement to Financial Statement</h1>
                 <div className="steps-format-container">
@@ -63,17 +62,7 @@ const SupplementMultiStepForm = () => {
                     <main>{renderStep(currentStep)}</main>
                 </div>
             </Provider>
-            <Button type={"default"} onClick={prev}>
-                Back
-            </Button>
-            <Button type={"primary"} onClick={next}>
-                Next
-            </Button>
-            {/*</Provider>*/}
-            <br/>
-            <br/>
         </div>
-
     );
 };
 export default SupplementMultiStepForm;

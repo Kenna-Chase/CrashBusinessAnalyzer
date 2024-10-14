@@ -92,7 +92,6 @@ const Equity = () => {
                     Next
                 </Button>
             </fieldset>
-            <br/>
         </div>
     );
 };

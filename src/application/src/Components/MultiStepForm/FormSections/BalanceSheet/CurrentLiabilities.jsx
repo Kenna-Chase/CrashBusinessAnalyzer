@@ -189,7 +189,6 @@ const CurrentLiabilities = () => {
                     Next
                 </Button>
             </fieldset>
-            <br/>
         </div>
     );
 };

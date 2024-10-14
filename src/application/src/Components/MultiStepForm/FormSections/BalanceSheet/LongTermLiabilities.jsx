@@ -60,7 +60,6 @@ const LongTermLiabilities = () => {
                     Next
                 </Button>
             </fieldset>
-            <br/>
         </div>
     );
 };

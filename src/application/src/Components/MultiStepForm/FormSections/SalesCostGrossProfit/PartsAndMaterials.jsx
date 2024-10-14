@@ -119,7 +119,6 @@ const PartsAndMaterials = () => {
                     Next
                 </Button>
             </fieldset>
-            <br/>
         </div>
     );
 };

@@ -145,7 +145,6 @@ const LaborRatesAndStalls = () => {
                     Next
                 </Button>
             </fieldset>
-            <br/>
         </div>
     );
 };

@@ -111,7 +111,6 @@ const SalariesWagesCommissions = () => {
                     Next
                 </Button>
             </fieldset>
-            <br/>
         </div>
     );
 };

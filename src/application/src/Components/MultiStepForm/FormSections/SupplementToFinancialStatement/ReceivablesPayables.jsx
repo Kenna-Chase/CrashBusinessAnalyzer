@@ -121,7 +121,6 @@ const ReceivablesPayables = () => {
                     Next
                 </Button>
             </fieldset>
-            <br/>
         </div>
     );
 };

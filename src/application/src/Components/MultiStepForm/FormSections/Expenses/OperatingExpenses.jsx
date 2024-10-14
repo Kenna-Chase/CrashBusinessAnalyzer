@@ -228,7 +228,6 @@ const OperatingExpenses = () => {
                     Next
                 </Button>
             </fieldset>
-            <br/>
         </div>
     );
 };

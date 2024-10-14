@@ -90,7 +90,6 @@ const OtherAssets = () => {
                     Next
                 </Button>
             </fieldset>
-            <br/>
         </div>
     );
 };

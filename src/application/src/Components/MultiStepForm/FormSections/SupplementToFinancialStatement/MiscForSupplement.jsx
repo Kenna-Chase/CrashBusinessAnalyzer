@@ -123,7 +123,6 @@ const MiscForSupplement = () => {
                     Next
                 </Button>
             </fieldset>
-            <br/>
         </div>
     );
 };

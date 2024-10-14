@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Provider } from "./ExpensesFormContext";
-import {Button, Steps} from "antd";
+import { Steps } from "antd";
 import SalariesWagesCommissions from "./SalariesWagesCommissions";
 import OperatingExpenses from "./OperatingExpenses";
 import OutsideServices from "./OutsideServices";
@@ -63,14 +63,6 @@ const ExpensesMultiStepForm = () => {
                     <main>{renderStep(currentStep)}</main>
                 </div>
             </Provider>
-            <Button type={"default"} onClick={prev}>
-                Back
-            </Button>
-            <Button type={"primary"} onClick={next}>
-                Next
-            </Button>
-            <br/>
-            <br/>
         </div>
 
     );

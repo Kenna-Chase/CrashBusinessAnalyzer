@@ -63,7 +63,6 @@ const SummaryIncome = () => {
                     </label>
                 </div>
             </fieldset>
-            <br/>
         </div>
     );
 };

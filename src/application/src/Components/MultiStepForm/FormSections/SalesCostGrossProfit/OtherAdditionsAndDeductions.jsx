@@ -164,7 +164,6 @@ const OtherAdditionsAndDeductions = () => {
                     Next
                 </Button>
             </fieldset>
-            <br/>
         </div>
     );
 };

@@ -152,7 +152,6 @@ const Other = () => {
                     Next
                 </Button>
             </fieldset>
-            <br/>
         </div>
     );
 };

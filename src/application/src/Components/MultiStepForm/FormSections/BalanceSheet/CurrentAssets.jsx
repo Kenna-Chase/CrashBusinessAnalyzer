@@ -164,7 +164,6 @@ const CurrentAssets = () => {
                     Next
                 </Button>
             </fieldset>
-            <br/>
         </div>
     );
 };

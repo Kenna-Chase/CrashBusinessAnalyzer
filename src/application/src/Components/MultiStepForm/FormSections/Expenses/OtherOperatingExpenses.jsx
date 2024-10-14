@@ -150,7 +150,6 @@ const OtherOperatingExpenses = () => {
                     Next
                 </Button>
             </fieldset>
-            <br/>
         </div>
     );
 };

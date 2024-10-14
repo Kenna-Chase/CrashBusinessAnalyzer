@@ -137,7 +137,6 @@ const OutsideServices = () => {
                     Next
                 </Button>
             </fieldset>
-            <br/>
         </div>
     );
 };

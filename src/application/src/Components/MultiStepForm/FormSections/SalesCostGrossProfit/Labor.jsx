@@ -253,7 +253,6 @@ const Labor = () => {
                     Next
                 </Button>
             </fieldset>
-            <br/>
         </div>
     );
 };
