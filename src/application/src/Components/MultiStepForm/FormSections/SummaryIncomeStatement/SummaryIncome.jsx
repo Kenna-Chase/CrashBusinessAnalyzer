@@ -6,8 +6,9 @@ import summaryIncomeData from "./SummaryIncomeStruct";
 const SummaryIncome = () => {
     return (
         <div>
+            <h1> Summary Income Statement </h1>
             <fieldset>
-                <legend> Summary Income Statement </legend>
+                <legend> Summary Income Statement</legend>
                 <div>
                     <label>
                         Bonuses - Employees ( Based on Net Profit )

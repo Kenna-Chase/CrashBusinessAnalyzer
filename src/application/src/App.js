@@ -7,7 +7,7 @@ import LoginSignUp from "./Components/LoginSignUp/LoginSignUp";
 import DataEntryForm from "./Components/DataEntryForm/DataEntryForm";
 import SupplementMultiStepForm
     from "./Components/MultiStepForm/FormSections/SupplementToFinancialStatement/SupplementMultiStepForm";
-import DataEntryMultiStepForm from "./Components/MultiStepForm/DataEntryMultiStepForm";
+import Overview from "./Components/MultiStepForm/DataEntryOverview/Overview";
 
 export default function App() {
     return (
@@ -37,7 +37,7 @@ export default function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<LoginSignUp />} />
                 <Route path="/supplement" element={<SupplementMultiStepForm />} />
-                <Route path="/dataEntryMultiStepForm" element={<DataEntryMultiStepForm />} />
+                <Route path="/dataEntryMultiStepForm" element={<Overview />} />
             </Routes>
         </BrowserRouter>
     );

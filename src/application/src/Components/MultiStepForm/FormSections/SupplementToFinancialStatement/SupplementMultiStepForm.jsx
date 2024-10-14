@@ -53,7 +53,7 @@ const SupplementMultiStepForm = () => {
                 <h1> Supplement to Financial Statement</h1>
                 <div className="steps-format-container">
                     <Steps current={currentStep} type="navigation" onChange={onChange}>
-                        <Step title={"Selling, General, Administration"}/>
+                        <Step title={"S.G.A"}/>
                         <Step title={"Production Personnel"}/>
                         <Step title={"Receivables & Payables"}/>
                         <Step title={"Labor Rates & Stalls"}/>
