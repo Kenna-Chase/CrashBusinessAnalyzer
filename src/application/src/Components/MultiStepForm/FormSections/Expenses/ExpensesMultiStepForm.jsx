@@ -12,7 +12,7 @@ const { Step } = Steps;
 
 const renderStep = (step) => {
     switch (step) {
-        //Sections of the Balance Sheet Form
+        //Sections of the Expenses Form
         case 0:
             return <SalariesWagesCommissions />;
         case 1:
