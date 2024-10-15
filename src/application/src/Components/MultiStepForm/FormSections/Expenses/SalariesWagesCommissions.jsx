@@ -16,7 +16,9 @@ const SalariesWagesCommissions = () => {
                         (ACCT#:{expensesData.salaries.sales.accountNumber})
                         <NumericFormat
                             value={expensesData.salaries.sales.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -29,7 +31,9 @@ const SalariesWagesCommissions = () => {
                         (ACCT#:{expensesData.salaries.owners.accountNumber})
                         <NumericFormat
                             value={expensesData.salaries.owners.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -42,7 +46,9 @@ const SalariesWagesCommissions = () => {
                         (ACCT#:{expensesData.salaries.supervision_general.accountNumber})
                         <NumericFormat
                             value={expensesData.salaries.supervision_general.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -55,7 +61,9 @@ const SalariesWagesCommissions = () => {
                         (ACCT#:{expensesData.salaries.supervision_parts.accountNumber})
                         <NumericFormat
                             value={expensesData.salaries.supervision_parts.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -68,7 +76,9 @@ const SalariesWagesCommissions = () => {
                         (ACCT#:{expensesData.salaries.supervision_office.accountNumber})
                         <NumericFormat
                             value={expensesData.salaries.supervision_office.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -81,7 +91,9 @@ const SalariesWagesCommissions = () => {
                         (ACCT#:{expensesData.salaries.other_general.accountNumber})
                         <NumericFormat
                             value={expensesData.salaries.other_general.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -94,7 +106,9 @@ const SalariesWagesCommissions = () => {
                         (ACCT#:{expensesData.salaries.other_office.accountNumber})
                         <NumericFormat
                             value={expensesData.salaries.other_office.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;

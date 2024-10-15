@@ -16,7 +16,9 @@ const Equity = () => {
                         (ACCT#:{balanceSheetData.equity.capitalStockOrInvestment.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.equity.capitalStockOrInvestment.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -31,7 +33,9 @@ const Equity = () => {
                         (ACCT#:{balanceSheetData.equity.addPaidInCapital.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.equity.addPaidInCapital.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -46,7 +50,9 @@ const Equity = () => {
                         (ACCT#:{balanceSheetData.equity.retainedEarnings.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.equity.retainedEarnings.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -61,7 +67,9 @@ const Equity = () => {
                         (ACCT#:{balanceSheetData.equity.dividendsDrawingAccount.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.equity.dividendsDrawingAccount.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -76,7 +84,9 @@ const Equity = () => {
                         (ACCT#:{balanceSheetData.equity.currentYearEarnings.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.equity.currentYearEarnings.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;

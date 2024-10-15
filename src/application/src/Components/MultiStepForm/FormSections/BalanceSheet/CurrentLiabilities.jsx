@@ -15,7 +15,9 @@ const CurrentLiabilities = () => {
                         Trade Creditors (ACCT#:{balanceSheetData.currentLiabilities.tradeCreditors.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentLiabilities.tradeCreditors.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -29,7 +31,9 @@ const CurrentLiabilities = () => {
                         Customer Deposits (ACCT#:{balanceSheetData.currentLiabilities.customerDeposits.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentLiabilities.customerDeposits.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -43,7 +47,9 @@ const CurrentLiabilities = () => {
                         Notes Payable (ACCT#:{balanceSheetData.currentLiabilities.notesPayable.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentLiabilities.notesPayable.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -58,7 +64,9 @@ const CurrentLiabilities = () => {
                         (ACCT#:{balanceSheetData.currentLiabilities.currentDebtPortion.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentLiabilities.currentDebtPortion.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -72,7 +80,9 @@ const CurrentLiabilities = () => {
                         Accrued Interest (ACCT#:{balanceSheetData.currentLiabilities.accruedInterest.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentLiabilities.accruedInterest.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -86,7 +96,9 @@ const CurrentLiabilities = () => {
                         Accrued Payroll (ACCT#:{balanceSheetData.currentLiabilities.accruedPayroll.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentLiabilities.accruedPayroll.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -100,7 +112,9 @@ const CurrentLiabilities = () => {
                         Accrued Insurance (ACCT#:{balanceSheetData.currentLiabilities.accruedInsurance.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentLiabilities.accruedInsurance.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -115,7 +129,9 @@ const CurrentLiabilities = () => {
                         (ACCT#:{balanceSheetData.currentLiabilities.accruedAndWithHeldPayrollTax.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentLiabilities.accruedAndWithHeldPayrollTax.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -129,7 +145,9 @@ const CurrentLiabilities = () => {
                         Accrued Sales Tax (ACCT#:{balanceSheetData.currentLiabilities.accruedSalesTax.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentLiabilities.accruedSalesTax.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -143,7 +161,9 @@ const CurrentLiabilities = () => {
                         Accrued Income Tax (ACCT#:{balanceSheetData.currentLiabilities.accruedIncomeTax.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentLiabilities.accruedIncomeTax.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -158,7 +178,9 @@ const CurrentLiabilities = () => {
                         (ACCT#:{balanceSheetData.currentLiabilities.accruedPropertyTax.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentLiabilities.accruedPropertyTax.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -173,7 +195,9 @@ const CurrentLiabilities = () => {
                         (ACCT#:{balanceSheetData.currentLiabilities.other.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentLiabilities.other.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;

@@ -21,8 +21,10 @@ const Labor = () => {
                                 Sales (ACCT#:{salesCostGrossProfitData.labor.bodyFrame.sales.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.labor.bodyFrame.sales.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.labor.bodyFrame.sales.value = floatValue;
@@ -35,8 +37,10 @@ const Labor = () => {
                                 Cost (ACCT#:{salesCostGrossProfitData.labor.bodyFrame.cost.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.labor.bodyFrame.cost.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.labor.bodyFrame.cost.value = floatValue;
@@ -54,8 +58,10 @@ const Labor = () => {
                                 Sales (ACCT#:{salesCostGrossProfitData.labor.paint.sales.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.labor.paint.sales.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.labor.paint.sales.value = floatValue;
@@ -68,8 +74,10 @@ const Labor = () => {
                                 Cost (ACCT#:{salesCostGrossProfitData.labor.paint.cost.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.labor.paint.cost.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.labor.paint.cost.value = floatValue;
@@ -87,8 +95,10 @@ const Labor = () => {
                                 Sales (ACCT#:{salesCostGrossProfitData.labor.detail.sales.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.labor.detail.sales.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.labor.detail.sales.value = floatValue;
@@ -101,8 +111,10 @@ const Labor = () => {
                                 Cost (ACCT#:{salesCostGrossProfitData.labor.detail.cost.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.labor.detail.cost.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.labor.detail.cost.value = floatValue;
@@ -120,8 +132,10 @@ const Labor = () => {
                                 Sales (ACCT#:{salesCostGrossProfitData.labor.mechanical.sales.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.labor.mechanical.sales.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.labor.mechanical.sales.value = floatValue;
@@ -134,8 +148,10 @@ const Labor = () => {
                                 Cost (ACCT#:{salesCostGrossProfitData.labor.mechanical.cost.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.labor.mechanical.cost.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.labor.mechanical.cost.value = floatValue;
@@ -153,8 +169,10 @@ const Labor = () => {
                                 Sales (ACCT#:{salesCostGrossProfitData.labor.other.sales.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.labor.other.sales.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.labor.other.sales.value = floatValue;
@@ -167,8 +185,10 @@ const Labor = () => {
                                 Cost (ACCT#:{salesCostGrossProfitData.labor.other.cost.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.labor.other.cost.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.labor.other.cost.value = floatValue;
@@ -186,8 +206,10 @@ const Labor = () => {
                                 Sales (ACCT#:{salesCostGrossProfitData.labor.followUp.sales.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.labor.followUp.sales.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.labor.followUp.sales.value = floatValue;
@@ -200,8 +222,10 @@ const Labor = () => {
                                 Cost (ACCT#:{salesCostGrossProfitData.labor.followUp.cost.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.labor.followUp.cost.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.labor.followUp.cost.value = floatValue;
@@ -219,8 +243,10 @@ const Labor = () => {
                                 Sales (ACCT#:{salesCostGrossProfitData.labor.adjustmentRefund.sales.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.labor.adjustmentRefund.sales.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.labor.adjustmentRefund.sales.value = floatValue;
@@ -233,8 +259,10 @@ const Labor = () => {
                                 Cost (ACCT#:{salesCostGrossProfitData.labor.adjustmentRefund.cost.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.labor.adjustmentRefund.cost.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.labor.adjustmentRefund.cost.value = floatValue;

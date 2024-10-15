@@ -16,7 +16,9 @@ const OtherOperatingExpenses = () => {
                         (ACCT#:{expensesData.occupancyExpenses.rent.accountNumber})
                         <NumericFormat
                             value={expensesData.occupancyExpenses.rent.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -29,7 +31,9 @@ const OtherOperatingExpenses = () => {
                         (ACCT#:{expensesData.occupancyExpenses.amoritizationOfLeaseholds.accountNumber})
                         <NumericFormat
                             value={expensesData.occupancyExpenses.amoritizationOfLeaseholds.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -42,7 +46,9 @@ const OtherOperatingExpenses = () => {
                         (ACCT#:{expensesData.occupancyExpenses.repairsOfRealEstate.accountNumber})
                         <NumericFormat
                             value={expensesData.occupancyExpenses.repairsOfRealEstate.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -55,7 +61,9 @@ const OtherOperatingExpenses = () => {
                         (ACCT#:{expensesData.occupancyExpenses.depreciationBuilding.accountNumber})
                         <NumericFormat
                             value={expensesData.occupancyExpenses.depreciationBuilding.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -68,7 +76,9 @@ const OtherOperatingExpenses = () => {
                         (ACCT#:{expensesData.occupancyExpenses.realEstateTaxes.accountNumber})
                         <NumericFormat
                             value={expensesData.occupancyExpenses.realEstateTaxes.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -81,7 +91,9 @@ const OtherOperatingExpenses = () => {
                         (ACCT#:{expensesData.occupancyExpenses.buildingInsurance.accountNumber})
                         <NumericFormat
                             value={expensesData.occupancyExpenses.buildingInsurance.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -94,7 +106,9 @@ const OtherOperatingExpenses = () => {
                         (ACCT#:{expensesData.occupancyExpenses.amoritizationOfLeaseholds.accountNumber})
                         <NumericFormat
                             value={expensesData.occupancyExpenses.amoritizationOfLeaseholds.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;

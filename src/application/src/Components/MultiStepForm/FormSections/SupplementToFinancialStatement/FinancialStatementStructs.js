@@ -1,4 +1,4 @@
-const supplementToFinancialStatementStruct = {
+const supplementToFinancialStatementData = {
     sellingGeneralAdministration:  {
         owners: '',
         sales: '',
@@ -68,4 +68,4 @@ const supplementToFinancialStatementStruct = {
     }
 }
 
-export default supplementToFinancialStatementStruct;
+export default supplementToFinancialStatementData;

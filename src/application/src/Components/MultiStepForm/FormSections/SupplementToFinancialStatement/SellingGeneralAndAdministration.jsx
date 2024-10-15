@@ -10,7 +10,6 @@ const SellingGeneralAndAdministration = () => {
 
     return (
         <div>
-
             <fieldset>
                 <legend>Selling, General, & Administration</legend>
                 <div>
@@ -18,7 +17,7 @@ const SellingGeneralAndAdministration = () => {
                         Owners
                         <NumericFormat
                             value={supplementToFinancialStatementData.sellingGeneralAdministration.owners}
-                            decimalScale={0}
+                            decimalScale={1}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -31,7 +30,7 @@ const SellingGeneralAndAdministration = () => {
                     <label>Sales / Estimators
                         <NumericFormat
                             value={supplementToFinancialStatementData.sellingGeneralAdministration.sales}
-                            decimalScale={0}
+                            decimalScale={1}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -44,7 +43,7 @@ const SellingGeneralAndAdministration = () => {
                     <label>Supervisors - General
                         <NumericFormat
                             value={supplementToFinancialStatementData.sellingGeneralAdministration.supervisors.general}
-                            decimalScale={0}
+                            decimalScale={1}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -57,7 +56,7 @@ const SellingGeneralAndAdministration = () => {
                     <label>Supervisors - Parts
                         <NumericFormat
                             value={supplementToFinancialStatementData.sellingGeneralAdministration.supervisors.parts}
-                            decimalScale={0}
+                            decimalScale={1}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -70,11 +69,37 @@ const SellingGeneralAndAdministration = () => {
                     <label>Supervisors - Office
                         <NumericFormat
                             value={supplementToFinancialStatementData.sellingGeneralAdministration.supervisors.office}
-                            decimalScale={0}
+                            decimalScale={1}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
                                 supplementToFinancialStatementData.sellingGeneralAdministration.supervisors.office = floatValue;
+                            }}
+                        />
+                    </label>
+                </div>
+                <div>
+                    <label>Other - General
+                        <NumericFormat
+                            value={supplementToFinancialStatementData.sellingGeneralAdministration.other.general}
+                            decimalScale={1}
+                            fixedDecimalScale={true}
+                            onValueChange={(values) => {
+                                const {floatValue} = values;
+                                supplementToFinancialStatementData.sellingGeneralAdministration.other.general = floatValue;
+                            }}
+                        />
+                    </label>
+                </div>
+                <div>
+                    <label>Other - Office (Clerical)
+                        <NumericFormat
+                            value={supplementToFinancialStatementData.sellingGeneralAdministration.other.office}
+                            decimalScale={1}
+                            fixedDecimalScale={true}
+                            onValueChange={(values) => {
+                                const {floatValue} = values;
+                                supplementToFinancialStatementData.sellingGeneralAdministration.other.office = floatValue;
                             }}
                         />
                     </label>

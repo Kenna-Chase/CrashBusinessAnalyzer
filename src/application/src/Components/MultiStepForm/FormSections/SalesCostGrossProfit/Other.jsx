@@ -21,8 +21,10 @@ const Other = () => {
                                 Sales (ACCT#:{salesCostGrossProfitData.other.carRentalFees.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.other.carRentalFees.sales.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.other.carRentalFees.sales.value = floatValue;
@@ -35,8 +37,10 @@ const Other = () => {
                                 Cost (ACCT#:{salesCostGrossProfitData.other.carRentalFees.cost.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.other.carRentalFees.cost.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.other.carRentalFees.cost.value = floatValue;
@@ -54,8 +58,10 @@ const Other = () => {
                                 Sales (ACCT#:{salesCostGrossProfitData.other.towingStorage.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.other.towingStorage.sales.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.other.towingStorage.sales.value = floatValue;
@@ -68,8 +74,10 @@ const Other = () => {
                                 Cost (ACCT#:{salesCostGrossProfitData.other.towingStorage.cost.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.other.towingStorage.cost.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.other.towingStorage.cost.value = floatValue;
@@ -87,8 +95,10 @@ const Other = () => {
                                 Sales (ACCT#:{salesCostGrossProfitData.other.otherFees.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.other.otherFees.sales.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.other.otherFees.sales.value = floatValue;
@@ -101,8 +111,10 @@ const Other = () => {
                                 Cost (ACCT#:{salesCostGrossProfitData.other.otherFees.cost.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.other.otherFees.cost.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.other.otherFees.cost.value = floatValue;
@@ -120,8 +132,10 @@ const Other = () => {
                                 Sales (ACCT#:{salesCostGrossProfitData.other.hazardousWasteReimburse.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.other.hazardousWasteReimburse.sales.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.other.hazardousWasteReimburse.sales.value = floatValue;
@@ -134,8 +148,10 @@ const Other = () => {
                                 Cost (ACCT#:{salesCostGrossProfitData.other.hazardousWasteReimburse.cost.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.other.hazardousWasteReimburse.cost.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.other.hazardousWasteReimburse.cost.value = floatValue;

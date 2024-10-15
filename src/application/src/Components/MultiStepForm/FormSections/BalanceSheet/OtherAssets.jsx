@@ -15,7 +15,9 @@ const OtherAssets = () => {
                         Net Fixed Assets (ACCT#:{balanceSheetData.otherAssets.netFixed.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.otherAssets.netFixed.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -29,7 +31,9 @@ const OtherAssets = () => {
                         Deposits (ACCT#:{balanceSheetData.otherAssets.deposits.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.otherAssets.deposits.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -44,7 +48,9 @@ const OtherAssets = () => {
                         (ACCT#:{balanceSheetData.otherAssets.recievablesOwners.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.otherAssets.recievablesOwners.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -59,7 +65,9 @@ const OtherAssets = () => {
                         (ACCT#:{balanceSheetData.otherAssets.recievablesEmployees.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.otherAssets.recievablesEmployees.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -74,7 +82,9 @@ const OtherAssets = () => {
                         (ACCT#:{balanceSheetData.otherAssets.other.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.otherAssets.other.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;

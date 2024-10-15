@@ -16,7 +16,7 @@ const ProductionPersonnel = () => {
                         Technicians - Body/Frame
                         <NumericFormat
                             value={supplementToFinancialStatementData.productionPersonnel.technicians.bodyframe}
-                            decimalScale={0}
+                            decimalScale={1}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -29,7 +29,7 @@ const ProductionPersonnel = () => {
                     <label>Technicians - Paint
                         <NumericFormat
                             value={supplementToFinancialStatementData.productionPersonnel.technicians.paint}
-                            decimalScale={0}
+                            decimalScale={1}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -42,7 +42,7 @@ const ProductionPersonnel = () => {
                     <label>Technicians - Detail
                         <NumericFormat
                             value={supplementToFinancialStatementData.productionPersonnel.technicians.detail}
-                            decimalScale={0}
+                            decimalScale={1}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -55,7 +55,7 @@ const ProductionPersonnel = () => {
                     <label>Technicians - Mechanical
                         <NumericFormat
                             value={supplementToFinancialStatementData.productionPersonnel.technicians.mechanical}
-                            decimalScale={0}
+                            decimalScale={1}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -68,7 +68,7 @@ const ProductionPersonnel = () => {
                     <label>Total Number of Employees
                         <NumericFormat
                             value={supplementToFinancialStatementData.productionPersonnel.totalNumberOfEmployees}
-                            decimalScale={0}
+                            decimalScale={1}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;

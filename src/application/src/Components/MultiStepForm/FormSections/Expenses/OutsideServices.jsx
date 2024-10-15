@@ -16,7 +16,9 @@ const OutsideServices = () => {
                         (ACCT#:{expensesData.outsideServices.bankCharge.accountNumber})
                         <NumericFormat
                             value={expensesData.outsideServices.bankCharge.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -29,7 +31,9 @@ const OutsideServices = () => {
                         (ACCT#:{expensesData.outsideServices.dataProcessing.accountNumber})
                         <NumericFormat
                             value={expensesData.outsideServices.dataProcessing.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -42,7 +46,9 @@ const OutsideServices = () => {
                         (ACCT#:{expensesData.outsideServices.security.accountNumber})
                         <NumericFormat
                             value={expensesData.outsideServices.security.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -55,7 +61,9 @@ const OutsideServices = () => {
                         (ACCT#:{expensesData.outsideServices.safetyPrograms.accountNumber})
                         <NumericFormat
                             value={expensesData.outsideServices.safetyPrograms.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -68,7 +76,9 @@ const OutsideServices = () => {
                         (ACCT#:{expensesData.outsideServices.janitorial.accountNumber})
                         <NumericFormat
                             value={expensesData.outsideServices.janitorial.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -81,7 +91,9 @@ const OutsideServices = () => {
                         (ACCT#:{expensesData.outsideServices.trashDisposal.accountNumber})
                         <NumericFormat
                             value={expensesData.outsideServices.trashDisposal.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -94,7 +106,9 @@ const OutsideServices = () => {
                         (ACCT#:{expensesData.outsideServices.laundryUniforms.accountNumber})
                         <NumericFormat
                             value={expensesData.outsideServices.laundryUniforms.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -107,7 +121,9 @@ const OutsideServices = () => {
                         (ACCT#:{expensesData.outsideServices.legalAudit.accountNumber})
                         <NumericFormat
                             value={expensesData.outsideServices.legalAudit.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -120,7 +136,9 @@ const OutsideServices = () => {
                         (ACCT#:{expensesData.outsideServices.other.accountNumber})
                         <NumericFormat
                             value={expensesData.outsideServices.other.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;

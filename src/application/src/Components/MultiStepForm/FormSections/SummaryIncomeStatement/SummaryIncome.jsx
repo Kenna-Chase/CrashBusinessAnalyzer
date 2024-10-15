@@ -15,7 +15,9 @@ const SummaryIncome = () => {
                         (ACCT#:{summaryIncomeData.bonuses.employees.accountNumber})
                         <NumericFormat
                             value={summaryIncomeData.bonuses.employees.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -28,7 +30,9 @@ const SummaryIncome = () => {
                         (ACCT#:{summaryIncomeData.bonuses.owners.accountNumber})
                         <NumericFormat
                             value={summaryIncomeData.bonuses.owners.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -41,7 +45,9 @@ const SummaryIncome = () => {
                         (ACCT#:{summaryIncomeData.taxes.stateIncome.accountNumber})
                         <NumericFormat
                             value={summaryIncomeData.taxes.stateIncome.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -54,7 +60,9 @@ const SummaryIncome = () => {
                         (ACCT#:{summaryIncomeData.taxes.stateIncome.accountNumber})
                         <NumericFormat
                             value={summaryIncomeData.taxes.stateIncome.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;

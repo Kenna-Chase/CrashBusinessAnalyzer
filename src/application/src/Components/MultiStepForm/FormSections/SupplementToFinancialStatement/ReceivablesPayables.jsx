@@ -22,7 +22,9 @@ const ReceivablesPayables = () => {
                                 Receivables
                                 <NumericFormat
                                     value={supplementToFinancialStatementStruct.receivables.current}
-                                    decimalScale={0}
+                                    thousandSeparator={true}
+                                    prefix={'$'}
+                                    decimalScale={2}
                                     fixedDecimalScale={true}
                                 />
                             </label>
@@ -32,7 +34,9 @@ const ReceivablesPayables = () => {
                                 Payables
                                 <NumericFormat
                                     value={supplementToFinancialStatementStruct.payables.current}
-                                    decimalScale={0}
+                                    thousandSeparator={true}
+                                    prefix={'$'}
+                                    decimalScale={2}
                                     fixedDecimalScale={true}
                                 />
                             </label>
@@ -47,7 +51,9 @@ const ReceivablesPayables = () => {
                                 Receivables
                                 <NumericFormat
                                     value={supplementToFinancialStatementStruct.receivables.prev60days}
-                                    decimalScale={0}
+                                    thousandSeparator={true}
+                                    prefix={'$'}
+                                    decimalScale={2}
                                     fixedDecimalScale={true}
                                 />
                             </label>
@@ -57,7 +63,9 @@ const ReceivablesPayables = () => {
                                 Payables
                                 <NumericFormat
                                     value={supplementToFinancialStatementStruct.payables.prev60days}
-                                    decimalScale={0}
+                                    thousandSeparator={true}
+                                    prefix={'$'}
+                                    decimalScale={2}
                                     fixedDecimalScale={true}
                                 />
                             </label>
@@ -72,7 +80,9 @@ const ReceivablesPayables = () => {
                                 Receivables
                                 <NumericFormat
                                     value={supplementToFinancialStatementStruct.receivables.prev90days}
-                                    decimalScale={0}
+                                    thousandSeparator={true}
+                                    prefix={'$'}
+                                    decimalScale={2}
                                     fixedDecimalScale={true}
                                 />
                             </label>
@@ -82,7 +92,9 @@ const ReceivablesPayables = () => {
                                 Payables
                                 <NumericFormat
                                     value={supplementToFinancialStatementStruct.payables.prev90days}
-                                    decimalScale={0}
+                                    thousandSeparator={true}
+                                    prefix={'$'}
+                                    decimalScale={2}
                                     fixedDecimalScale={true}
                                 />
                             </label>
@@ -97,7 +109,9 @@ const ReceivablesPayables = () => {
                                 Receivables
                                 <NumericFormat
                                     value={supplementToFinancialStatementStruct.receivables.over90days}
-                                    decimalScale={0}
+                                    thousandSeparator={true}
+                                    prefix={'$'}
+                                    decimalScale={2}
                                     fixedDecimalScale={true}
                                 />
                             </label>
@@ -107,7 +121,9 @@ const ReceivablesPayables = () => {
                                 Payables
                                 <NumericFormat
                                     value={supplementToFinancialStatementStruct.payables.prev90days}
-                                    decimalScale={0}
+                                    thousandSeparator={true}
+                                    prefix={'$'}
+                                    decimalScale={2}
                                     fixedDecimalScale={true}
                                 />
                             </label>

@@ -6,7 +6,7 @@ import SupplementMultiStepForm
 import SalesCostGPMultiStepForm from "../FormSections/SalesCostGrossProfit/SalesCostGPMultiStepForm";
 import ExpensesMultiStepForm from "../FormSections/Expenses/ExpensesMultiStepForm";
 import SummaryIncome from "../FormSections/SummaryIncomeStatement/SummaryIncome";
-import BalanceSheetMultiStepForm from "../FormSections/BalanceSheet/BalanceSheetMultiStepForm"; // Ensure SectionPage is imported correctly
+import BalanceSheetMultiStepForm from "../FormSections/BalanceSheet/BalanceSheetMultiStepForm";
 
 function Overview() {
     const [currentSection, setCurrentSection] = useState(null);
@@ -31,7 +31,7 @@ function Overview() {
     const handleSubmit = (section) => {
         setCompletedSections((prev) => ({
             ...prev,
-            [section]: true, // Mark the section as completed
+            [section]: true,
         }));
         setCurrentSection(null); // Return to overview
     };

@@ -1,6 +1,6 @@
 import {NumericFormat} from "react-number-format";
 import React, {useContext} from "react";
-import supplementToFinancialStatementStruct from "./FinancialStatementStructs";
+import supplementToFinancialStatementData from "./FinancialStatementStructs";
 import {Button, Row, Col} from "antd";
 import SupplementFormContext from "./SupplementFormContext";
 
@@ -20,8 +20,10 @@ const LaborRatesAndStalls = () => {
                             <label>
                                 Hourly Labor Rates
                                 <NumericFormat
-                                    value={supplementToFinancialStatementStruct.hourlyRatesandStalls.body.hourlyLaborRate}
-                                    decimalScale={0}
+                                    value={supplementToFinancialStatementData.hourlyRatesandStalls.body.hourlyLaborRate}
+                                    thousandSeparator={true}
+                                    prefix={'$'}
+                                    decimalScale={2}
                                     fixedDecimalScale={true}
                                 />
                             </label>
@@ -30,7 +32,7 @@ const LaborRatesAndStalls = () => {
                             <label>
                                 # of Stalls
                                 <NumericFormat
-                                    value={supplementToFinancialStatementStruct.hourlyRatesandStalls.body.numberOfStalls}
+                                    value={supplementToFinancialStatementData.hourlyRatesandStalls.body.numberOfStalls}
                                     decimalScale={0}
                                     fixedDecimalScale={true}
                                 />
@@ -45,8 +47,10 @@ const LaborRatesAndStalls = () => {
                             <label>
                                 Hourly Labor Rates
                                 <NumericFormat
-                                    value={supplementToFinancialStatementStruct.hourlyRatesandStalls.frame.hourlyLaborRate}
-                                    decimalScale={0}
+                                    value={supplementToFinancialStatementData.hourlyRatesandStalls.frame.hourlyLaborRate}
+                                    thousandSeparator={true}
+                                    prefix={'$'}
+                                    decimalScale={2}
                                     fixedDecimalScale={true}
                                 />
                             </label>
@@ -55,7 +59,7 @@ const LaborRatesAndStalls = () => {
                             <label>
                                 # of Stalls
                                 <NumericFormat
-                                    value={supplementToFinancialStatementStruct.hourlyRatesandStalls.frame.numberOfStalls}
+                                    value={supplementToFinancialStatementData.hourlyRatesandStalls.frame.numberOfStalls}
                                     decimalScale={0}
                                     fixedDecimalScale={true}
                                 />
@@ -70,8 +74,10 @@ const LaborRatesAndStalls = () => {
                             <label>
                                 Hourly Labor Rates
                                 <NumericFormat
-                                    value={supplementToFinancialStatementStruct.hourlyRatesandStalls.paint.hourlyLaborRate}
-                                    decimalScale={0}
+                                    value={supplementToFinancialStatementData.hourlyRatesandStalls.paint.hourlyLaborRate}
+                                    thousandSeparator={true}
+                                    prefix={'$'}
+                                    decimalScale={2}
                                     fixedDecimalScale={true}
                                 />
                             </label>
@@ -80,7 +86,7 @@ const LaborRatesAndStalls = () => {
                             <label>
                                 # of Stalls
                                 <NumericFormat
-                                    value={supplementToFinancialStatementStruct.hourlyRatesandStalls.paint.numberOfStalls}
+                                    value={supplementToFinancialStatementData.hourlyRatesandStalls.paint.numberOfStalls}
                                     decimalScale={0}
                                     fixedDecimalScale={true}
                                 />
@@ -95,8 +101,10 @@ const LaborRatesAndStalls = () => {
                             <label>
                                 Hourly Labor Rates
                                 <NumericFormat
-                                    value={supplementToFinancialStatementStruct.hourlyRatesandStalls.detail.hourlyLaborRate}
-                                    decimalScale={0}
+                                    value={supplementToFinancialStatementData.hourlyRatesandStalls.detail.hourlyLaborRate}
+                                    thousandSeparator={true}
+                                    prefix={'$'}
+                                    decimalScale={2}
                                     fixedDecimalScale={true}
                                 />
                             </label>
@@ -105,7 +113,7 @@ const LaborRatesAndStalls = () => {
                             <label>
                                 # of Stalls
                                 <NumericFormat
-                                    value={supplementToFinancialStatementStruct.hourlyRatesandStalls.detail.numberOfStalls}
+                                    value={supplementToFinancialStatementData.hourlyRatesandStalls.detail.numberOfStalls}
                                     decimalScale={0}
                                     fixedDecimalScale={true}
                                 />
@@ -120,8 +128,10 @@ const LaborRatesAndStalls = () => {
                             <label>
                                 Hourly Labor Rates
                                 <NumericFormat
-                                    value={supplementToFinancialStatementStruct.hourlyRatesandStalls.mechanical.hourlyLaborRate}
-                                    decimalScale={0}
+                                    value={supplementToFinancialStatementData.hourlyRatesandStalls.mechanical.hourlyLaborRate}
+                                    thousandSeparator={true}
+                                    prefix={'$'}
+                                    decimalScale={2}
                                     fixedDecimalScale={true}
                                 />
                             </label>
@@ -130,7 +140,7 @@ const LaborRatesAndStalls = () => {
                             <label>
                                 # of Stalls
                                 <NumericFormat
-                                    value={supplementToFinancialStatementStruct.hourlyRatesandStalls.mechanical.numberOfStalls}
+                                    value={supplementToFinancialStatementData.hourlyRatesandStalls.mechanical.numberOfStalls}
                                     decimalScale={0}
                                     fixedDecimalScale={true}
                                 />

@@ -21,8 +21,10 @@ const PartsAndMaterials = () => {
                                 Sales (ACCT#:{salesCostGrossProfitData.partsAndMaterials.parts.sales.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.partsAndMaterials.parts.sales.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.partsAndMaterials.parts.sales.value = floatValue;
@@ -35,8 +37,10 @@ const PartsAndMaterials = () => {
                                 Cost (ACCT#:{salesCostGrossProfitData.partsAndMaterials.parts.cost.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.partsAndMaterials.parts.cost.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.partsAndMaterials.parts.cost.value = floatValue;
@@ -54,8 +58,10 @@ const PartsAndMaterials = () => {
                                 Sales (ACCT#:{salesCostGrossProfitData.partsAndMaterials.paintMaterial.sales.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.partsAndMaterials.paintMaterial.sales.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.partsAndMaterials.paintMaterial.sales.value = floatValue;
@@ -68,8 +74,10 @@ const PartsAndMaterials = () => {
                                 Cost (ACCT#:{salesCostGrossProfitData.partsAndMaterials.paintMaterial.cost.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.partsAndMaterials.paintMaterial.cost.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.partsAndMaterials.paintMaterial.cost.value = floatValue;
@@ -87,8 +95,10 @@ const PartsAndMaterials = () => {
                                 Sales (ACCT#:{salesCostGrossProfitData.partsAndMaterials.sublet.sales.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.partsAndMaterials.sublet.sales.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.partsAndMaterials.sublet.sales.value = floatValue;
@@ -101,8 +111,10 @@ const PartsAndMaterials = () => {
                                 Cost (ACCT#:{salesCostGrossProfitData.partsAndMaterials.sublet.cost.accountNumber})
                                 <NumericFormat
                                     value={salesCostGrossProfitData.partsAndMaterials.sublet.cost.value}
-                                    decimalScale={0}
-                                    fixedDecimalScale={true}
+                                    thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
+                            fixedDecimalScale={true}
                                     onValueChange={(values) => {
                                         const {floatValue} = values;
                                         salesCostGrossProfitData.partsAndMaterials.sublet.cost.value = floatValue;

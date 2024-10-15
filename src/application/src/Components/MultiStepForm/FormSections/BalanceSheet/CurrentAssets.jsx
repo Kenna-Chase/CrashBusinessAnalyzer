@@ -15,7 +15,9 @@ const CurrentAssets = () => {
                         Cash On Hand (ACCT#:{balanceSheetData.currentAssets.cashOnHand.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.cashOnHand.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -29,7 +31,9 @@ const CurrentAssets = () => {
                         Cash In Bank (ACCT#:{balanceSheetData.currentAssets.cashInBank.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.cashInBank.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -43,7 +47,9 @@ const CurrentAssets = () => {
                         Trade Recievables (ACCT#:{balanceSheetData.currentAssets.tradeRecievables.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.tradeRecievables.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -58,7 +64,9 @@ const CurrentAssets = () => {
                         (ACCT#:{balanceSheetData.currentAssets.allowanceForDoubt.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.allowanceForDoubt.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -73,7 +81,9 @@ const CurrentAssets = () => {
                         (ACCT#:{balanceSheetData.currentAssets.partsInventory.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.partsInventory.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -88,7 +98,9 @@ const CurrentAssets = () => {
                         (ACCT#:{balanceSheetData.currentAssets.paintInventory.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.paintInventory.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -103,7 +115,9 @@ const CurrentAssets = () => {
                         (ACCT#:{balanceSheetData.currentAssets.workInProgressInventory.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.workInProgressInventory.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -118,7 +132,9 @@ const CurrentAssets = () => {
                         (ACCT#:{balanceSheetData.currentAssets.subletInventory.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.subletInventory.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -133,7 +149,9 @@ const CurrentAssets = () => {
                         (ACCT#:{balanceSheetData.currentAssets.prepaidExpenses.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.prepaidExpenses.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -148,7 +166,9 @@ const CurrentAssets = () => {
                         (ACCT#:{balanceSheetData.currentAssets.other.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.currentAssets.other.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;

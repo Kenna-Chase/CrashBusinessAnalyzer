@@ -15,7 +15,9 @@ const LongTermLiabilities = () => {
                         Notes Payable (ACCT#:{balanceSheetData.longTermLiabilities.notesPayable.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.longTermLiabilities.notesPayable.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -30,7 +32,9 @@ const LongTermLiabilities = () => {
                         (ACCT#:{balanceSheetData.longTermLiabilities.notesPayableOfficers.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.longTermLiabilities.notesPayableOfficers.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -44,7 +48,9 @@ const LongTermLiabilities = () => {
                        Other Long Term Liabilities (ACCT#:{balanceSheetData.longTermLiabilities.other.accountNumber})
                         <NumericFormat
                             value={balanceSheetData.longTermLiabilities.other.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;

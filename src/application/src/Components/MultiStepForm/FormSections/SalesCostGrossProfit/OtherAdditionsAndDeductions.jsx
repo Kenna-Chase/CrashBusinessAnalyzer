@@ -17,7 +17,9 @@ const OtherAdditionsAndDeductions = () => {
                         (ACCT#:{salesCostGrossProfitData.otherAdditionsAndDeductions.additions.cashDiscounts.accountNumber})
                         <NumericFormat
                             value={salesCostGrossProfitData.otherAdditionsAndDeductions.additions.cashDiscounts.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -30,7 +32,9 @@ const OtherAdditionsAndDeductions = () => {
                         (ACCT#:{salesCostGrossProfitData.otherAdditionsAndDeductions.additions.interestEarned.accountNumber})
                         <NumericFormat
                             value={salesCostGrossProfitData.otherAdditionsAndDeductions.additions.interestEarned.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -43,7 +47,9 @@ const OtherAdditionsAndDeductions = () => {
                         (ACCT#:{salesCostGrossProfitData.otherAdditionsAndDeductions.additions.badDebtRecovered.accountNumber})
                         <NumericFormat
                             value={salesCostGrossProfitData.otherAdditionsAndDeductions.additions.badDebtRecovered.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -56,7 +62,9 @@ const OtherAdditionsAndDeductions = () => {
                         (ACCT#:{salesCostGrossProfitData.otherAdditionsAndDeductions.additions.miscIncome.accountNumber})
                         <NumericFormat
                             value={salesCostGrossProfitData.otherAdditionsAndDeductions.additions.miscIncome.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -69,7 +77,9 @@ const OtherAdditionsAndDeductions = () => {
                         (ACCT#:{salesCostGrossProfitData.otherAdditionsAndDeductions.additions.commissions.accountNumber})
                         <NumericFormat
                             value={salesCostGrossProfitData.otherAdditionsAndDeductions.additions.commissions.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -82,7 +92,9 @@ const OtherAdditionsAndDeductions = () => {
                         (ACCT#:{salesCostGrossProfitData.otherAdditionsAndDeductions.additions.otherIncome.accountNumber})
                         <NumericFormat
                             value={salesCostGrossProfitData.otherAdditionsAndDeductions.additions.otherIncome.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -96,7 +108,9 @@ const OtherAdditionsAndDeductions = () => {
                         (ACCT#:{salesCostGrossProfitData.otherAdditionsAndDeductions.deductions.badDebt.accountNumber})
                         <NumericFormat
                             value={salesCostGrossProfitData.otherAdditionsAndDeductions.deductions.badDebt.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -109,7 +123,9 @@ const OtherAdditionsAndDeductions = () => {
                         (ACCT#:{salesCostGrossProfitData.otherAdditionsAndDeductions.deductions.penalties.accountNumber})
                         <NumericFormat
                             value={salesCostGrossProfitData.otherAdditionsAndDeductions.deductions.penalties.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -122,7 +138,9 @@ const OtherAdditionsAndDeductions = () => {
                         (ACCT#:{salesCostGrossProfitData.otherAdditionsAndDeductions.deductions.cashOverShort.accountNumber})
                         <NumericFormat
                             value={salesCostGrossProfitData.otherAdditionsAndDeductions.deductions.cashOverShort.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -135,7 +153,9 @@ const OtherAdditionsAndDeductions = () => {
                         (ACCT#:{salesCostGrossProfitData.otherAdditionsAndDeductions.deductions.otherDeductions.accountNumber})
                         <NumericFormat
                             value={salesCostGrossProfitData.otherAdditionsAndDeductions.deductions.otherDeductions.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -148,7 +168,9 @@ const OtherAdditionsAndDeductions = () => {
                         (ACCT#:{salesCostGrossProfitData.otherAdditionsAndDeductions.deductions.amoritizationOfIntangibles.accountNumber})
                         <NumericFormat
                             value={salesCostGrossProfitData.otherAdditionsAndDeductions.deductions.amoritizationOfIntangibles.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;

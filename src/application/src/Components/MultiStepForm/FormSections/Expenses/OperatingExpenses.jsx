@@ -16,7 +16,9 @@ const OperatingExpenses = () => {
                         (ACCT#:{expensesData.operatingExpenses.employee_benefits.accountNumber})
                         <NumericFormat
                             value={expensesData.operatingExpenses.employee_benefits.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -29,7 +31,9 @@ const OperatingExpenses = () => {
                         (ACCT#:{expensesData.operatingExpenses.compensation_insurance.accountNumber})
                         <NumericFormat
                             value={expensesData.operatingExpenses.compensation_insurance.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -42,7 +46,9 @@ const OperatingExpenses = () => {
                         (ACCT#:{expensesData.operatingExpenses.payroll_taxes.accountNumber})
                         <NumericFormat
                             value={expensesData.operatingExpenses.payroll_taxes.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -55,7 +61,9 @@ const OperatingExpenses = () => {
                         (ACCT#:{expensesData.operatingExpenses.absorbedTowingDelivery.accountNumber})
                         <NumericFormat
                             value={expensesData.operatingExpenses.absorbedTowingDelivery.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -68,7 +76,9 @@ const OperatingExpenses = () => {
                         (ACCT#:{expensesData.operatingExpenses.absorbedCarRental.accountNumber})
                         <NumericFormat
                             value={expensesData.operatingExpenses.absorbedCarRental.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -81,7 +91,9 @@ const OperatingExpenses = () => {
                         (ACCT#:{expensesData.operatingExpenses.advertising.accountNumber})
                         <NumericFormat
                             value={expensesData.operatingExpenses.advertising.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -94,7 +106,9 @@ const OperatingExpenses = () => {
                         (ACCT#:{expensesData.operatingExpenses.promotion.accountNumber})
                         <NumericFormat
                             value={expensesData.operatingExpenses.promotion.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -107,7 +121,9 @@ const OperatingExpenses = () => {
                         (ACCT#:{expensesData.operatingExpenses.trainingFees.accountNumber})
                         <NumericFormat
                             value={expensesData.operatingExpenses.trainingFees.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -120,7 +136,9 @@ const OperatingExpenses = () => {
                         (ACCT#:{expensesData.operatingExpenses.seminarsConventions.accountNumber})
                         <NumericFormat
                             value={expensesData.operatingExpenses.seminarsConventions.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -133,7 +151,9 @@ const OperatingExpenses = () => {
                         (ACCT#:{expensesData.operatingExpenses.travel.accountNumber})
                         <NumericFormat
                             value={expensesData.operatingExpenses.travel.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -146,7 +166,9 @@ const OperatingExpenses = () => {
                         (ACCT#:{expensesData.operatingExpenses.mealsEntertainment.accountNumber})
                         <NumericFormat
                             value={expensesData.operatingExpenses.mealsEntertainment.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -159,7 +181,9 @@ const OperatingExpenses = () => {
                         (ACCT#:{expensesData.operatingExpenses.companyVehicleExpense.accountNumber})
                         <NumericFormat
                             value={expensesData.operatingExpenses.companyVehicleExpense.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -172,7 +196,9 @@ const OperatingExpenses = () => {
                         (ACCT#:{expensesData.operatingExpenses.stationaryAndOfficeSupplies.accountNumber})
                         <NumericFormat
                             value={expensesData.operatingExpenses.stationaryAndOfficeSupplies.value}
-                            decimalScale={0}
+                           thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -185,7 +211,9 @@ const OperatingExpenses = () => {
                         (ACCT#:{expensesData.operatingExpenses.otherSuppliesSmall.accountNumber})
                         <NumericFormat
                             value={expensesData.operatingExpenses.otherSuppliesSmall.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -198,7 +226,9 @@ const OperatingExpenses = () => {
                         (ACCT#:{expensesData.operatingExpenses.telephoneFax.accountNumber})
                         <NumericFormat
                             value={expensesData.operatingExpenses.telephoneFax.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
@@ -211,7 +241,9 @@ const OperatingExpenses = () => {
                         (ACCT#:{expensesData.operatingExpenses.postage.accountNumber})
                         <NumericFormat
                             value={expensesData.operatingExpenses.postage.value}
-                            decimalScale={0}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                            decimalScale={2}
                             fixedDecimalScale={true}
                             onValueChange={(values) => {
                                 const {floatValue} = values;
