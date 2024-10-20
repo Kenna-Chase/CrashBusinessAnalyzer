@@ -1,19 +1,22 @@
-var express = require('express');
-var app = express();
-var fs = require('fs');
-var port = 8080;
+const express = require('express');
+const path = require('path');
+const port = 8080;
+const app = express();
 
-app.get('/test', function (req, res) {
-    res.send('the REST endpoint test run!');
+// Serve static files from the React app's build directory
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+// REST endpoint example
+app.get('/api/test', function (req, res) {
+    res.json({ message: 'The REST endpoint test is running!' });
 });
 
-app.get('/', function (req, res) {
-    html = fs.readFileSync('index.html');
-    res.writeHead(200);
-    res.write(html);
-    res.end();
+// For any other route, send the React app's index.html
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
+// Start the server
 app.listen(port, function() {
-  console.log('Server running at http://127.0.0.1:', port);
+    console.log('Server running at http://127.0.0.1:' + port);
 });
