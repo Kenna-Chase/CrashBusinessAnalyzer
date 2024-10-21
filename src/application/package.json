@@ -4,8 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "prestart": "cd client && npm install && npm run build",
-    "build": "npm install && cd client && npm install && npm run build"
+    "build": "react-scripts build"
   },
   "keywords": [],
   "author": "",
