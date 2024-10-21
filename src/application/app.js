@@ -11,9 +11,8 @@ app.get('/api/test', function (req, res) {
     res.json({ message: 'The REST endpoint test is running!' });
 });
 
-// For any other route, send the React app's index.html
 app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'client/index.js'));
+    res.sendFile(path.join(__dirname, 'client/src/index.js'));
 });
 
 // Start the server
