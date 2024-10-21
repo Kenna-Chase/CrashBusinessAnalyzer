@@ -13,7 +13,7 @@ app.get('/api/test', function (req, res) {
 
 // For any other route, send the React app's index.html
 app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+    res.json({ message: 'This is not the page you are looking for!' });
 });
 
 // Start the server
