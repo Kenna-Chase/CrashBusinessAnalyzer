@@ -1,33 +1,73 @@
 import * as dynamodb from 'aws-cdk-lib/aws-dynamodb';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as apigateway from 'aws-cdk-lib/aws-apigateway';
+import * as iam from 'aws-cdk-lib/aws-iam';
 import { Stack, StackProps } from 'aws-cdk-lib';
 import {Construct} from "constructs";
 import {ManagedPolicy, Role, ServicePrincipal} from "aws-cdk-lib/aws-iam";
 
+/**
+ * The stack that defines the database components.
+ */
 export class DatabaseStack extends Stack {
     constructor(scope: Construct, id: string, props?: StackProps) {
         super(scope, id, props);
 
-        const salesCostGrossProfitTable = new dynamodb.Table(this, 'SalesCostGrossProfitData', {
-            partitionKey: { name: 'id', type: dynamodb.AttributeType.STRING },
+        // DynamoDB Database
+        const salesCostGrossProfitTable = new dynamodb.Table(
+            this,
+            'SalesCostGrossProfitData',
+            {
+                partitionKey: {
+                    name: 'id',
+                    type: dynamodb.AttributeType.STRING
+                },
             billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
         });
 
-        const lambdaFunction = new lambda.Function(this, 'initalLambdaFunction', {
-            code: lambda.Code.fromAsset('lib/lambda-handler'),
+        // Lambda Functions
+        const getSalesCostGrossProfitDataLambda = new lambda.Function(this, 'getSalesCostGPData', {
             runtime: lambda.Runtime.NODEJS_LATEST,
-            handler: 'index.handler',
-            role: this.dynamoLambdaRole()
+            functionName: 'getSalesCostGPData',
+            code: lambda.Code.fromAsset('lib/lambda-handlers'),
+            handler: 'getSalesCostGrossProfit.handler',
         });
+        getSalesCostGrossProfitDataLambda.addToRolePolicy(
+            new iam.PolicyStatement({
+                actions: ['dynamodb:Scan'],
+                resources: [salesCostGrossProfitTable.tableArn]
+            })
+        );
 
-    }
-
-    private  dynamoLambdaRole() {
-        const lambdaDynamoRole = new Role(this, 'LambdaRole', {
-            assumedBy: new ServicePrincipal('lambda.amazonaws.com'),
+        const putSalesCostGrossProfitDataLambda = new lambda.Function(this, 'putSalesCostGPData', {
+            runtime: lambda.Runtime.NODEJS_LATEST,
+            functionName: 'putSalesCostGPData',
+            code: lambda.Code.fromAsset('lib/lambda-handlers'),
+            handler: 'putSalesCostGrossProfit.handler',
         });
-        lambdaDynamoRole.addManagedPolicy(
-            ManagedPolicy.fromAwsManagedPolicyName('AmazonDynamoDBFullAccess'));
-        return lambdaDynamoRole;
+        putSalesCostGrossProfitDataLambda.addToRolePolicy(
+            new iam.PolicyStatement({
+                actions: ['dynamodb:PutItem'],
+                resources: [salesCostGrossProfitTable.tableArn]
+            })
+        );
+
+        // API Gateway
+        const getSalesCostGrossProfitDataAPI = new apigateway.LambdaRestApi(this, 'getSalesCostGPApi', {
+            proxy: false,
+            handler: getSalesCostGrossProfitDataLambda
+        });
+        const apiResourceGet = getSalesCostGrossProfitDataAPI.root.addResource('getSalesCostGrossProfit');
+        const getSalesCostGrossProfitApiLambdaIntegration = new apigateway.LambdaIntegration(getSalesCostGrossProfitDataLambda);
+        apiResourceGet.addMethod('GET', getSalesCostGrossProfitApiLambdaIntegration)
+
+        const putSalesCostGrossProfitDataAPI = new apigateway.LambdaRestApi(this, 'salesCostGPApi', {
+            proxy: false,
+            handler: putSalesCostGrossProfitDataLambda
+        });
+        const apiResourcePut = putSalesCostGrossProfitDataAPI.root.addResource('salesCostGrossProfit');
+        const putSalesCostGrossProfitApiLambdaIntegration = new apigateway.LambdaIntegration(putSalesCostGrossProfitDataLambda);
+
+        apiResourcePut.addMethod('PUT', putSalesCostGrossProfitApiLambdaIntegration);
     }
 }
