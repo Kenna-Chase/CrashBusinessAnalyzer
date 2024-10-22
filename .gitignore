@@ -14,4 +14,5 @@ src-application/package-lock.json
 src-application/node_modules
 src/application/src/client/build
 src/application/src/client/package-lock.json
+src/application/package-lock.json
 .DS_Store
