@@ -12,6 +12,6 @@ cdk.out
 !src-application/*
 src-application/package-lock.json
 src-application/node_modules
-src/application/client/build
-src/application/client/package-lock.json
+src/application/src/client/build
+src/application/src/client/package-lock.json
 .DS_Store
