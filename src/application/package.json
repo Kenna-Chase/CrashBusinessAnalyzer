@@ -4,7 +4,8 @@
   "main": "./src/server.js",
   "type": "module",
   "scripts": {
-    "start": "npm install && nodemon --env-file .env ."
+    "start": "npm install && nodemon .",
+    "start-dev" : "nodemon --env-file .env ."
   },
   "keywords": [],
   "author": "",
