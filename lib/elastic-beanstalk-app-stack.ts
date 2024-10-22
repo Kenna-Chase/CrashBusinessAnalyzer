@@ -77,7 +77,7 @@ export class ElasticBeanstalkApplicationStack extends cdk.Stack {
             {
                 namespace: 'aws:ec2:instances',
                 optionName: 'InstanceTypes',
-                value: props?.instanceTypes ?? 't2.micro',
+                value: props?.instanceTypes ?? 't2.medium',
             },
         ];
 
