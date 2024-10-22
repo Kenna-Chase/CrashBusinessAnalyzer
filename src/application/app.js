@@ -12,7 +12,7 @@ app.get('/api/test', function (req, res) {
 });
 
 app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'src/index.js'));
+    res.sendFile(path.join(__dirname, 'client/src/index.js'));
 });
 
 // Start the server
