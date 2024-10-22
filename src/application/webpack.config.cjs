@@ -17,12 +17,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/client/index.html',
         }),
-        new webpack.EnvironmentPlugin(
-            [
-                'NODE_ENV',
-                'SERVER_HOST',
-                'SERVER_PORT',
-            ]),
         new webpack.HotModuleReplacementPlugin()
     ],
     module: {

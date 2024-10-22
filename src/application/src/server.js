@@ -5,8 +5,8 @@ import webpackConfig from '../webpack.config.cjs';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import historyApiFallback from 'connect-history-api-fallback';
 
-const HOST = process.env.SERVER_HOST;
-const PORT = process.env.SERVER_PORT;
+// const HOST = process.env.SERVER_HOST;
+const PORT = process.env.SERVER_PORT || 8080;
 
 const app = express();
 
@@ -41,6 +41,6 @@ ApiRouter.get('/login', (req, res) => {
 })
 app.use('/api', ApiRouter);
 
-app.listen(PORT, HOST, () => {
-    console.log(`Server listening on ${HOST}:${PORT}`);
+app.listen(PORT, function() {
+    console.log('Server running at http://127.0.0.1:' + PORT);
 });
