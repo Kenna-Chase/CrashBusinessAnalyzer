@@ -22,8 +22,10 @@ export class DatabaseStack extends Stack {
                     name: 'id',
                     type: dynamodb.AttributeType.STRING
                 },
-            billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
-        });
+                tableName: 'SalesCostGrossProfitData',
+                billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
+            }
+            );
 
         // Lambda Functions
         const getSalesCostGrossProfitDataLambda = new lambda.Function(this, 'getSalesCostGPData', {
@@ -31,6 +33,9 @@ export class DatabaseStack extends Stack {
             functionName: 'getSalesCostGPData',
             code: lambda.Code.fromAsset('lib/lambda-handlers'),
             handler: 'getSalesCostGrossProfit.handler',
+            environment: {
+                DYNAMODB_TABLE: salesCostGrossProfitTable.tableName
+            }
         });
         getSalesCostGrossProfitDataLambda.addToRolePolicy(
             new iam.PolicyStatement({
@@ -39,11 +44,15 @@ export class DatabaseStack extends Stack {
             })
         );
 
+
         const putSalesCostGrossProfitDataLambda = new lambda.Function(this, 'putSalesCostGPData', {
             runtime: lambda.Runtime.NODEJS_LATEST,
             functionName: 'putSalesCostGPData',
             code: lambda.Code.fromAsset('lib/lambda-handlers'),
             handler: 'putSalesCostGrossProfit.handler',
+            environment: {
+                DYNAMODB_TABLE: salesCostGrossProfitTable.tableName
+            }
         });
         putSalesCostGrossProfitDataLambda.addToRolePolicy(
             new iam.PolicyStatement({
