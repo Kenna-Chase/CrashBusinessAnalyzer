@@ -9,6 +9,8 @@ import SummaryIncome from "../FormSections/SummaryIncomeStatement/SummaryIncome"
 import BalanceSheetMultiStepForm from "../FormSections/BalanceSheet/BalanceSheetMultiStepForm";
 import "../DataEntry.css";
 import {useNavigate} from "react-router";
+import { putSalesCostGPRecord} from "../../ApiTesting/APIConnections.js";
+import salesCostGrossProfitData from "../FormSections/SalesCostGrossProfit/SalesCostGrossProfitStruct.js";
 
 function DataEntryForm() {
     const navigate = useNavigate();
@@ -40,8 +42,18 @@ function DataEntryForm() {
             [section]: true,
         }));
         setCurrentSection(null); // Return to overview
+        //Save Result to database?
+        //Based on section... save results to associated database
+        console.log(section);
+        saveDataPerSection(section);
     };
 
+    const saveDataPerSection = (section, data) => {
+        if(section.toString() === "section3"){
+            console.log("Section 3: Sales Cost GP")
+            putSalesCostGPRecord(salesCostGrossProfitData);
+        }
+    }
     const allSectionsCompleted = Object.values(completedSections).every((completed) => completed);
 
     //Handle overall form submission
