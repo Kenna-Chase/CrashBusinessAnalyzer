@@ -5,6 +5,7 @@ import * as iam from 'aws-cdk-lib/aws-iam';
 import { Stack, StackProps } from 'aws-cdk-lib';
 import {Construct} from "constructs";
 import {ManagedPolicy, Role, ServicePrincipal} from "aws-cdk-lib/aws-iam";
+import {Cors} from "aws-cdk-lib/aws-apigateway";
 
 /**
  * The stack that defines the database components.
@@ -64,7 +65,11 @@ export class DatabaseStack extends Stack {
         // API Gateway
         const getSalesCostGrossProfitDataAPI = new apigateway.LambdaRestApi(this, 'getSalesCostGPApi', {
             proxy: false,
-            handler: getSalesCostGrossProfitDataLambda
+            handler: getSalesCostGrossProfitDataLambda,
+            defaultCorsPreflightOptions: {
+                allowOrigins: Cors.ALL_ORIGINS,
+                allowMethods: Cors.ALL_METHODS,
+            }
         });
         const apiResourceGet = getSalesCostGrossProfitDataAPI.root.addResource('getSalesCostGrossProfit');
         const getSalesCostGrossProfitApiLambdaIntegration = new apigateway.LambdaIntegration(getSalesCostGrossProfitDataLambda);
@@ -72,7 +77,11 @@ export class DatabaseStack extends Stack {
 
         const putSalesCostGrossProfitDataAPI = new apigateway.LambdaRestApi(this, 'salesCostGPApi', {
             proxy: false,
-            handler: putSalesCostGrossProfitDataLambda
+            handler: putSalesCostGrossProfitDataLambda,
+            defaultCorsPreflightOptions: {
+                allowOrigins: Cors.ALL_ORIGINS,
+                allowMethods: Cors.ALL_METHODS,
+            }
         });
         const apiResourcePut = putSalesCostGrossProfitDataAPI.root.addResource('salesCostGrossProfit');
         const putSalesCostGrossProfitApiLambdaIntegration = new apigateway.LambdaIntegration(putSalesCostGrossProfitDataLambda);
