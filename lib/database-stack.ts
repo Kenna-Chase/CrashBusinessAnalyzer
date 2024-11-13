@@ -4,7 +4,6 @@ import * as apigateway from 'aws-cdk-lib/aws-apigateway';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import { Stack, StackProps } from 'aws-cdk-lib';
 import {Construct} from "constructs";
-import {ManagedPolicy, Role, ServicePrincipal} from "aws-cdk-lib/aws-iam";
 import {Cors} from "aws-cdk-lib/aws-apigateway";
 
 /**
@@ -17,13 +16,13 @@ export class DatabaseStack extends Stack {
         // DynamoDB Database
         const salesCostGrossProfitTable = new dynamodb.Table(
             this,
-            'SalesCostGrossProfitData',
+            'SalesCostGrossProfitDataTable',
             {
                 partitionKey: {
                     name: 'id',
                     type: dynamodb.AttributeType.STRING
                 },
-                tableName: 'SalesCostGrossProfitData',
+                tableName: 'SalesCostGrossProfitDataTable',
                 billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
             }
             );
@@ -75,7 +74,7 @@ export class DatabaseStack extends Stack {
         const getSalesCostGrossProfitApiLambdaIntegration = new apigateway.LambdaIntegration(getSalesCostGrossProfitDataLambda);
         apiResourceGet.addMethod('GET', getSalesCostGrossProfitApiLambdaIntegration)
 
-        const putSalesCostGrossProfitDataAPI = new apigateway.LambdaRestApi(this, 'salesCostGPApi', {
+        const putSalesCostGrossProfitDataAPI = new apigateway.LambdaRestApi(this, 'putSalesCostGPApi', {
             proxy: false,
             handler: putSalesCostGrossProfitDataLambda,
             defaultCorsPreflightOptions: {
@@ -83,7 +82,7 @@ export class DatabaseStack extends Stack {
                 allowMethods: Cors.ALL_METHODS,
             }
         });
-        const apiResourcePut = putSalesCostGrossProfitDataAPI.root.addResource('salesCostGrossProfit');
+        const apiResourcePut = putSalesCostGrossProfitDataAPI.root.addResource('putSalesCostGrossProfit');
         const putSalesCostGrossProfitApiLambdaIntegration = new apigateway.LambdaIntegration(putSalesCostGrossProfitDataLambda);
 
         apiResourcePut.addMethod('PUT', putSalesCostGrossProfitApiLambdaIntegration);
