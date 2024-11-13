@@ -4,6 +4,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Home from "./Components/Home/Home.jsx";
 import DataEntryForm from "./Components/DataEntryForm/DataEntryOverview/DataEntryForm.jsx";
 import LoginSignUp from "./Components/LoginSignUp/LoginSignUp.jsx";
+import ApiTestPage from "./Components/ApiTesting/ApiTestPage.jsx";
 
 const router = createBrowserRouter([
     {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
             {path: '/home', element: <Home />},
             {path: '/dataentry', element: <DataEntryForm />},
             {path: '/login', element: <LoginSignUp />},
+            {path: '/apiTest', element: <ApiTestPage />},
         ]
     }
 ]);
