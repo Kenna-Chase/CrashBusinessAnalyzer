@@ -11,6 +11,9 @@ const Home = () => {
     const goToLoginPage = () => {
         navigate("/login");
     }
+    const gotToAPiTestPage = () => {
+        navigate("/apiTest");
+    }
 
     return (
         <div>
@@ -22,6 +25,7 @@ const Home = () => {
                 <Flex vertical gap="large" align="center" style={{ width: '50%' }}>
                     <Button block size="large" onClick={goToLoginPage}> Login/Sign Up</Button>
                     <Button block size="large" onClick={goToDataEntryPage}>Data Entry</Button>
+                    <Button block size={"large"} onClick={gotToAPiTestPage}>API Testing</Button>
                 </Flex>
             </div>
 

@@ -4,7 +4,7 @@ import * as apigateway from 'aws-cdk-lib/aws-apigateway';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import { Stack, StackProps } from 'aws-cdk-lib';
 import {Construct} from "constructs";
-import {ManagedPolicy, Role, ServicePrincipal} from "aws-cdk-lib/aws-iam";
+import {Cors} from "aws-cdk-lib/aws-apigateway";
 
 /**
  * The stack that defines the database components.
@@ -16,13 +16,13 @@ export class DatabaseStack extends Stack {
         // DynamoDB Database
         const salesCostGrossProfitTable = new dynamodb.Table(
             this,
-            'SalesCostGrossProfitData',
+            'SalesCostGrossProfitDataTable',
             {
                 partitionKey: {
                     name: 'id',
                     type: dynamodb.AttributeType.STRING
                 },
-                tableName: 'SalesCostGrossProfitData',
+                tableName: 'SalesCostGrossProfitDataTable',
                 billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
             }
             );
@@ -64,17 +64,25 @@ export class DatabaseStack extends Stack {
         // API Gateway
         const getSalesCostGrossProfitDataAPI = new apigateway.LambdaRestApi(this, 'getSalesCostGPApi', {
             proxy: false,
-            handler: getSalesCostGrossProfitDataLambda
+            handler: getSalesCostGrossProfitDataLambda,
+            defaultCorsPreflightOptions: {
+                allowOrigins: Cors.ALL_ORIGINS,
+                allowMethods: Cors.ALL_METHODS,
+            }
         });
         const apiResourceGet = getSalesCostGrossProfitDataAPI.root.addResource('getSalesCostGrossProfit');
         const getSalesCostGrossProfitApiLambdaIntegration = new apigateway.LambdaIntegration(getSalesCostGrossProfitDataLambda);
         apiResourceGet.addMethod('GET', getSalesCostGrossProfitApiLambdaIntegration)
 
-        const putSalesCostGrossProfitDataAPI = new apigateway.LambdaRestApi(this, 'salesCostGPApi', {
+        const putSalesCostGrossProfitDataAPI = new apigateway.LambdaRestApi(this, 'putSalesCostGPApi', {
             proxy: false,
-            handler: putSalesCostGrossProfitDataLambda
+            handler: putSalesCostGrossProfitDataLambda,
+            defaultCorsPreflightOptions: {
+                allowOrigins: Cors.ALL_ORIGINS,
+                allowMethods: Cors.ALL_METHODS,
+            }
         });
-        const apiResourcePut = putSalesCostGrossProfitDataAPI.root.addResource('salesCostGrossProfit');
+        const apiResourcePut = putSalesCostGrossProfitDataAPI.root.addResource('putSalesCostGrossProfit');
         const putSalesCostGrossProfitApiLambdaIntegration = new apigateway.LambdaIntegration(putSalesCostGrossProfitDataLambda);
 
         apiResourcePut.addMethod('PUT', putSalesCostGrossProfitApiLambdaIntegration);
