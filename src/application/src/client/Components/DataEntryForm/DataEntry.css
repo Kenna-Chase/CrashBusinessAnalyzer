@@ -156,3 +156,10 @@ button[type="submit"]:hover {
     color: #ae2593 !important; /* Replace with your desired color */
 
 }
+.container {
+    display: grid;
+    alignItems: center;
+    justifyContent: center;
+    padding: 20px;
+    margin: auto;
+}

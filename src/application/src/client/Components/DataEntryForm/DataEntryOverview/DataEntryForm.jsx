@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Flex } from "antd";
+import { Button } from "antd";
 import SectionPage from './SectionPage';
 import SupplementMultiStepForm
     from "../FormSections/SupplementToFinancialStatement/SupplementMultiStepForm";
@@ -8,15 +8,10 @@ import ExpensesMultiStepForm from "../FormSections/Expenses/ExpensesMultiStepFor
 import SummaryIncome from "../FormSections/SummaryIncomeStatement/SummaryIncome";
 import BalanceSheetMultiStepForm from "../FormSections/BalanceSheet/BalanceSheetMultiStepForm";
 import "../DataEntry.css";
-import {useNavigate} from "react-router";
 import { putSalesCostGPRecord} from "../../ApiTesting/APIConnections.js";
 import salesCostGrossProfitData from "../FormSections/SalesCostGrossProfit/SalesCostGrossProfitStruct.js";
 
-function DataEntryForm() {
-    const navigate = useNavigate();
-    const goHome = () => {
-        navigate("/home");
-    };
+const DataEntryForm= ({yearMonth}) => {
     const [currentSection, setCurrentSection] = useState(null);
 
     const [completedSections, setCompletedSections] = useState({
@@ -42,15 +37,19 @@ function DataEntryForm() {
             [section]: true,
         }));
         setCurrentSection(null); // Return to overview
-        //Save Result to database?
+        //Save Result to database
         //Based on section... save results to associated database
         console.log(section);
         saveDataPerSection(section);
     };
 
-    const saveDataPerSection = (section, data) => {
+    const saveDataPerSection = (section) => {
         if(section.toString() === "section3"){
-            console.log("Section 3: Sales Cost GP")
+            console.log("Saving Section 3: Sales Cost GP .....")
+            salesCostGrossProfitData.companyName = "TestCompany";
+            salesCostGrossProfitData.yearMonth = yearMonth;
+            console.log(salesCostGrossProfitData.yearMonth);
+            console.log(salesCostGrossProfitData);
             putSalesCostGPRecord(salesCostGrossProfitData);
         }
     }
@@ -141,11 +140,7 @@ function DataEntryForm() {
                         handleSubmit={handleSubmit}
                         goBack={() => setCurrentSection(null)}
                     />)}
-            <div align={"center"}>
-                <Flex vertical gap="small" align="center" style={{width: '50%'}}>
-                    <Button block size="large" onClick={goHome}>Go back Home</Button>
-                </Flex>
-            </div>
+
             <br/>
         </div>
     );
