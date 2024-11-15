@@ -6,7 +6,6 @@ import PartsAndMaterials from "./PartsAndMaterials";
 import Other from "./Other";
 import OtherAdditionsAndDeductions from "./OtherAdditionsAndDeductions";
 
-
 const { Step } = Steps;
 
 const renderStep = (step) => {
@@ -48,7 +47,7 @@ const BalanceSheetMultiStepForm = () => {
     return (
         <div>
             <Provider value={{next, prev}}>
-                <h1> Sales / Cost / Gross Profit  </h1>
+                <h1> Sales / Cost / Gross Profit </h1>
                 <div className="steps-format-container">
                     <Steps current={currentStep} type="navigation" onChange={onChange}>
                         <Step title={"Labor"}/>

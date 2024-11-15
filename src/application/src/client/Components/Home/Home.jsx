@@ -14,6 +14,9 @@ const Home = () => {
     const gotToAPiTestPage = () => {
         navigate("/apiTest");
     }
+    const gotToMetricsPage = () => {
+        navigate("/metrics");
+    }
 
     return (
         <div>
@@ -26,6 +29,7 @@ const Home = () => {
                     <Button block size="large" onClick={goToLoginPage}> Login/Sign Up</Button>
                     <Button block size="large" onClick={goToDataEntryPage}>Data Entry</Button>
                     <Button block size={"large"} onClick={gotToAPiTestPage}>API Testing</Button>
+                    <Button block size={"large"} onClick={gotToMetricsPage}>Metrics</Button>
                 </Flex>
             </div>
 

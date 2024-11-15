@@ -1,4 +1,6 @@
 const salesCostGrossProfitData= {
+    companyName: "",
+    yearMonth: "",
     labor: {
         bodyFrame: {
             sales: {
