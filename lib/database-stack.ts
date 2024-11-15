@@ -61,6 +61,23 @@ export class DatabaseStack extends Stack {
             })
         );
 
+        const aggregateSalesCostGrossProfitDataLambda = new lambda.Function(this, 'aggregateSalesCostGPData', {
+            runtime: lambda.Runtime.NODEJS_LATEST,
+            functionName: 'aggregateSalesCostGPData',
+            code: lambda.Code.fromAsset('lib/lambda-handlers'),
+            handler: 'aggregateSalesCostGrossProfit.handler',
+            environment: {
+                DYNAMODB_TABLE: salesCostGrossProfitTable.tableName
+            }
+        });
+        aggregateSalesCostGrossProfitDataLambda.addToRolePolicy(
+            new iam.PolicyStatement({
+                actions: ['dynamodb:*'],
+                resources: [salesCostGrossProfitTable.tableArn]
+            })
+        );
+
+
         // API Gateway
         const getSalesCostGrossProfitDataAPI = new apigateway.LambdaRestApi(this, 'getSalesCostGPApi', {
             proxy: false,
@@ -84,7 +101,19 @@ export class DatabaseStack extends Stack {
         });
         const apiResourcePut = putSalesCostGrossProfitDataAPI.root.addResource('putSalesCostGrossProfit');
         const putSalesCostGrossProfitApiLambdaIntegration = new apigateway.LambdaIntegration(putSalesCostGrossProfitDataLambda);
-
         apiResourcePut.addMethod('PUT', putSalesCostGrossProfitApiLambdaIntegration);
+
+        const aggregateSalesCostGrossProfitDataAPI = new apigateway.LambdaRestApi(this, 'aggregateSalesCostGPApi', {
+            proxy: false,
+            handler: putSalesCostGrossProfitDataLambda,
+            defaultCorsPreflightOptions: {
+                allowOrigins: Cors.ALL_ORIGINS,
+                allowMethods: Cors.ALL_METHODS,
+            }
+        });
+        const apiResourceAggregate = aggregateSalesCostGrossProfitDataAPI.root.addResource('aggregateSalesCostGrossProfit');
+        const aggregateSalesCostGrossProfitApiLambdaIntegration = new apigateway.LambdaIntegration(aggregateSalesCostGrossProfitDataLambda);
+        apiResourceAggregate.addMethod('GET', aggregateSalesCostGrossProfitApiLambdaIntegration);
+
     }
 }
