@@ -72,7 +72,7 @@ export class DatabaseStack extends Stack {
         });
         aggregateSalesCostGrossProfitDataLambda.addToRolePolicy(
             new iam.PolicyStatement({
-                actions: ['dynamodb:*'],
+                actions: ['dynamodb:Scan'],
                 resources: [salesCostGrossProfitTable.tableArn]
             })
         );
@@ -113,7 +113,7 @@ export class DatabaseStack extends Stack {
         });
         const apiResourceAggregate = aggregateSalesCostGrossProfitDataAPI.root.addResource('aggregateSalesCostGrossProfit');
         const aggregateSalesCostGrossProfitApiLambdaIntegration = new apigateway.LambdaIntegration(aggregateSalesCostGrossProfitDataLambda);
-        apiResourceAggregate.addMethod('GET', aggregateSalesCostGrossProfitApiLambdaIntegration);
+        apiResourceAggregate.addMethod('PUT', aggregateSalesCostGrossProfitApiLambdaIntegration);
 
     }
 }
