@@ -5,6 +5,7 @@ import Home from "./Components/Home/Home.jsx";
 import LoginSignUp from "./Components/LoginSignUp/LoginSignUp.jsx";
 import ApiTestPage from "./Components/ApiTesting/ApiTestPage.jsx";
 import DataEntryHomePage from "./Components/DataEntryForm/DataEntryOverview/DataEntryHomePage.jsx";
+import MetricViewPage from "./Components/Metrics/MetricViewPage.jsx";
 
 const router = createBrowserRouter([
     {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
             {path: '/dataentry', element: <DataEntryHomePage />},
             {path: '/login', element: <LoginSignUp />},
             {path: '/apiTest', element: <ApiTestPage />},
+            {path: '/metrics', element: <MetricViewPage />}
         ]
     }
 ]);
