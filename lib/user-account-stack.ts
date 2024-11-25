@@ -32,10 +32,11 @@ export class UserAccountStack extends Stack {
             runtime: lambda.Runtime.NODEJS_LATEST,
             functionName: 'userAccountLambda',
             code: lambda.Code.fromAsset('lib/lambda-handlers/user-accounts'),
-            handler: 'login.handler',
+            handler: 'userAccountLogic.handler',
             timeout: Duration.seconds(5),
             environment: {
-                DYNAMODB_TABLE: userAccountTable.tableName
+                DYNAMODB_TABLE: userAccountTable.tableName,
+                JWT_SECRET: "secretSecret",
             }
         });
         //Add IAM Roles for Lambda
