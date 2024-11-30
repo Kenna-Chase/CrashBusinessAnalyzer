@@ -1,24 +1,11 @@
 import React from 'react';
-import {createRoot} from 'react-dom/client';
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Home from "./Components/Home/Home.jsx";
-import LoginSignUp from "./Components/LoginSignUp/LoginSignUp.jsx";
-import ApiTestPage from "./Components/ApiTesting/ApiTestPage.jsx";
-import DataEntryHomePage from "./Components/DataEntryForm/DataEntryOverview/DataEntryHomePage.jsx";
-import MetricViewPage from "./Components/Metrics/MetricViewPage.jsx";
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App.js';
 
-const router = createBrowserRouter([
-    {
-        children: [
-            {path: '/', element: <Home />},
-            {path: '/home', element: <Home />},
-            {path: '/dataentry', element: <DataEntryHomePage />},
-            {path: '/login', element: <LoginSignUp />},
-            {path: '/apiTest', element: <ApiTestPage />},
-            {path: '/metrics', element: <MetricViewPage />}
-        ]
-    }
-]);
-const root = createRoot(document.getElementById('root'));
-root.render(<RouterProvider router={router} />);
-
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+);

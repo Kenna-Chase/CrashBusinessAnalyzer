@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import {Button, DatePicker, Flex, Input} from "antd";
 import {useNavigate} from "react-router";
 import {aggregateSalesCostGPRecord} from "../ApiTesting/APIConnections.js";
+import RedirectPage from "../Redirect/RedirectPage.jsx";
+import AuthService from "../../../service/AuthService.js";
 
 const MetricViewPage = () => {
     const [yearMonth, setYearMonth] = useState(null);
@@ -29,6 +31,8 @@ const MetricViewPage = () => {
     }
 
     return (
+        /** Only display if user is logged in **/
+        !AuthService.getToken() ? <RedirectPage/> :
             <div>
                 <div className="header">
                     <h1> Welcome to Metrics </h1>
