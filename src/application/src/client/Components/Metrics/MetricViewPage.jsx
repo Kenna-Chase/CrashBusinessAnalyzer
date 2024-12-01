@@ -22,12 +22,8 @@ const MetricViewPage = () => {
     async function calcMetrics() {
         //NOTE: Current issue with await not waiting and setting data before ready
         const data = await aggregateSalesCostGPRecord("TestCompany", yearMonth)
-            .then( () =>
-            {
-                console.log("DATA: " + data);
-                setData(data);
-            }
-        );
+            .then(() => setData(data));
+        console.log("DATA: " + data);
     }
 
     return (

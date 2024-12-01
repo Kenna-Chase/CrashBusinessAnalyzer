@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 module.exports = {
     mode: 'development',
@@ -17,7 +18,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/client/index.html',
         }),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new NodePolyfillPlugin()
     ],
     module: {
         rules: [
@@ -44,6 +46,10 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx'],
+        fallback: {
+            net: false,
+            async_hooks: false,
+        }
     }
 };
