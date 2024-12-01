@@ -1,43 +1,8 @@
 import React from "react";
-import "./MetricTable.css";
+import "../Metric.css";
 import { Table } from "antd";
 
-const MetricTable = () => {
-    const jsonData = {
-        sectionTotals: {
-            labor: { sales: 7, cost: 21 },
-            partsAndMaterials: { sales: 3, cost: 6 },
-            other: { sales: 4, cost: 8 },
-        },
-        totals: {
-            salesTotal: 14,
-            costTotal: 35,
-            gpTotal: -21,
-        },
-        otherAdditionsAndDeductions: { additions: 21, dedections: 45 },
-        gpSectionCalculations: {
-            labor: {
-                followUp: { sales: 1, cost: 3, gp: -2 },
-                other: { sales: 1, cost: 3, gp: -2 },
-                adjustmentRefund: { sales: 1, cost: 3, gp: -2 },
-                bodyFrame: { sales: 1, cost: 3, gp: -2 },
-                paint: { sales: 1, cost: 3, gp: -2 },
-                mechanical: { sales: 1, cost: 3, gp: -2 },
-                detail: { sales: 1, cost: 3, gp: -2 },
-            },
-            partsAndMaterials: {
-                parts: { sales: 1, cost: 2, gp: -1 },
-                paintMaterial: { sales: 1, cost: 2, gp: -1 },
-                sublet: { sales: 1, cost: 2, gp: -1 },
-            },
-            other: {
-                towingStorage: { sales: 1, cost: 2, gp: -1 },
-                otherFees: { sales: 1, cost: 2, gp: -1 },
-                hazardousWasteReimburse: { sales: 1, cost: 2, gp: -1 },
-                carRentalFees: { sales: 1, cost: 2, gp: -1 },
-            },
-        },
-    };
+const MetricTable = ({ jsonData }) => {
 
     const prepareTableData = (data, headers) =>
         Object.entries(data).map(([key, values]) => {
@@ -92,15 +57,19 @@ const MetricTable = () => {
             </div>
         );
     };
+    const sections  = Object.fromEntries(
+        Object.entries(jsonData.sectionTotals).filter(([key, value]) => key !== 'overallTotals' && key !== 'otherAdditionsAndDeductions')
+    );
 
     return (
         <div className="Table">
             <h1>Data Tables</h1>
             <h2>Sales, Cost, Gross Profit</h2>
             {/* Overall Totals */}
-            {generateTable("Overall Totals", jsonData.totals, ["value"])}
+            {generateTable("Overall Totals", jsonData.sectionTotals.overallTotals, ["value"])}
             {/* Section Totals */}
-            {generateTable("Section Totals", jsonData.sectionTotals, ["sales", "cost"])}
+            {generateTable("Section Totals", sections, ["sales", "cost"])}
+            {generateTable("Additions and Deductions", jsonData.sectionTotals.otherAdditionsAndDeductions, ["value"])}
             <h2>Section Breakdowns</h2>
             {/* GP Section Calculations */}
             {Object.entries(jsonData.gpSectionCalculations).map(([section, data]) =>

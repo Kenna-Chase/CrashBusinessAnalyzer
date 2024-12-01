@@ -16,7 +16,6 @@ export class ElasticBeanstalkApplicationStack extends cdk.Stack {
     constructor(scope: Construct, id: string, props?: EBEnvProps) {
         super(scope, id, props);
 
-
         // Construct an S3 asset Zip from directory up.
         const webAppZipArchive = new s3assets.Asset(this, 'WebAppZip', {
             path: `${__dirname}/../src/application`,

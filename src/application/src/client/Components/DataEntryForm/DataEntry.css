@@ -138,23 +138,21 @@ button[type="submit"]:hover {
 }
 
 .horizontal-steps .ant-steps-item-finish .ant-steps-item-icon .anticon-check  {
-
+    align-items: center;
     color: white !important; /* Replace with your desired color */
 
 }
-/* Change the color of the steps circles */
-.horizontal-steps .ant-steps-item-process .ant-steps-item-icon,
-.horizontal-steps .ant-steps-item-finish .ant-steps-item-icon,
-.horizontal-steps .ant-steps-item-error .ant-steps-item-icon {
-    background-color: #ae2593 !important; /* Replace with your desired color */
-    border-color: #ae2593 !important; /* Replace with your desired color */
+
+.steps-prefix-cls-item-custom .steps-prefix-cls-item-icon {
+    align-items: center;
 }
-
-
-.horizontal-steps .ant-steps-item-finish .ant-steps-item-title::after{
-    background-color: #ae2593 !important; /* Replace with your desired color */
-    color: #ae2593 !important; /* Replace with your desired color */
-
+.ant-steps-icon {
+    align-items: center;
+    text-align: center;
+}
+.ant-steps-item-icon {
+    align-items: center;
+    text-align: center;
 }
 .container {
     display: grid;

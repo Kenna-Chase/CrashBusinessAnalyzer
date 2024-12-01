@@ -54,3 +54,14 @@ h2 {
     text-align: center;
 }
 
+.page-container {
+    font-size: 18px; /* Set the base font size */
+}
+
+.page-container h2 {
+    font-size: 24px; /* Larger size for headers */
+}
+
+.page-container .ant-typography {
+    font-size: 18px; /* For Typography components */
+}

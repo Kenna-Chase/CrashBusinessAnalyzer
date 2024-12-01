@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useEffect } from "react";
-import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import AuthService from "../service/AuthService.js";
 import Home from "./Components/Home/Home.jsx";
 import LoginSignUp from "./Components/LoginSignUp/LoginSignUp.jsx";
