@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useEffect } from "react";
-import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import AuthService from "../service/AuthService.js";
 import Home from "./Components/Home/Home.jsx";
 import LoginSignUp from "./Components/LoginSignUp/LoginSignUp.jsx";
@@ -8,6 +8,7 @@ import DataEntryHomePage from "./Components/DataEntryForm/DataEntryOverview/Data
 import MetricViewPage from "./Components/Metrics/MetricViewPage.jsx";
 import axios from "axios";
 import RedirectPage from "./Components/Redirect/RedirectPage.jsx";
+import MetricTable from "./Components/Metrics/Display/MetricTable.jsx";
 
 const verifyTokenAPIURl = "https://8rxho3mpod.execute-api.us-east-1.amazonaws.com/prod/verify";
 
@@ -49,6 +50,7 @@ export default function App() {
                     <Route path="/dataentry" element={<DataEntryHomePage/>}/>
                     <Route path="/metrics" element={<MetricViewPage/>}/>
                     <Route path="/redirect" element={<RedirectPage/>}/>
+                    <Route path="/table" element={<MetricTable />} />
                     <Route path="/*" element={<LoginSignUp/>}/>
                 </Routes>
             </BrowserRouter>
