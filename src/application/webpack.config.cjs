@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 module.exports = {
     mode: 'development',
@@ -19,7 +19,11 @@ module.exports = {
             template: './src/client/index.html',
         }),
         new webpack.HotModuleReplacementPlugin(),
-        new NodePolyfillPlugin()
+        new NodePolyfillPlugin(),
+        new webpack.ProvidePlugin({
+            Buffer: ['buffer', 'Buffer'],
+            process: path.resolve(require.resolve('process/browser')), // Fix for fully specified path
+        }),
     ],
     module: {
         rules: [
@@ -48,6 +52,10 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx'],
         fallback: {
+            buffer: require.resolve('buffer/'), // Polyfill for buffer
+            stream: require.resolve('stream-browserify'), // Stream polyfill
+            util: require.resolve('util/'), // Utility polyfill
+            process: require.resolve('process/browser'), // Fix for process
             net: false,
             async_hooks: false,
         }
