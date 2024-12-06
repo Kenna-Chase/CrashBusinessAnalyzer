@@ -1,7 +1,15 @@
-# Architecture of Application
+# Architecture & Application Flow
 
 
-![Workflow Diagram](images/ArchitectureDiagram.png)
+![Architecture Diagram](images/ArchitectureDiagram.png)
 
 
-### Sections
+### Flow of Application
+
+#### User Login & Authentication
+
+#### Data Entry
+
+#### Metric Calculation
+
+
