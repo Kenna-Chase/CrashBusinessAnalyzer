@@ -23,6 +23,7 @@ module.exports = {
         new webpack.ProvidePlugin({
             Buffer: ['buffer', 'Buffer'],
             process: path.resolve(require.resolve('process/browser')), // Fix for fully specified path
+            crypto: 'crypto-browserify',
         }),
     ],
     module: {
@@ -56,6 +57,7 @@ module.exports = {
             stream: require.resolve('stream-browserify'), // Stream polyfill
             util: require.resolve('util/'), // Utility polyfill
             process: require.resolve('process/browser'), // Fix for process
+            crypto: require.resolve('crypto-browserify'),
             net: false,
             async_hooks: false,
         }
