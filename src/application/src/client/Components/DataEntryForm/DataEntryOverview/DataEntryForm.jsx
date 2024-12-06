@@ -10,8 +10,11 @@ import BalanceSheetMultiStepForm from "../FormSections/BalanceSheet/BalanceSheet
 import "../DataEntry.css";
 import { putSalesCostGPRecord} from "../../ApiTesting/APIConnections.js";
 import salesCostGrossProfitData from "../FormSections/SalesCostGrossProfit/SalesCostGrossProfitStruct.js";
+import AuthService from "../../../../service/AuthService.js";
 
 const DataEntryForm= ({yearMonth}) => {
+    const company = AuthService.getUser().company;
+
     const [currentSection, setCurrentSection] = useState(null);
 
     const [completedSections, setCompletedSections] = useState({
@@ -74,7 +77,7 @@ const DataEntryForm= ({yearMonth}) => {
     const saveDataPerSection = (section) => {
         if(section.toString() === "section3"){
             console.log("Saving Section 3: Sales Cost GP .....")
-            salesCostGrossProfitData.companyName = "TestCompany";
+            salesCostGrossProfitData.companyName = company;
             salesCostGrossProfitData.yearMonth = yearMonth;
             console.log(salesCostGrossProfitData.yearMonth);
             console.log(salesCostGrossProfitData);

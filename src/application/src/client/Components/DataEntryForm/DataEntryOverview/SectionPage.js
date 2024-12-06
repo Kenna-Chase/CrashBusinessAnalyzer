@@ -24,10 +24,6 @@ const SectionPage = ({ section, content, handleSubmit, generateDemoData, goBack 
                     Save Results
                 </Button>
             </div>
-            {/*<div>*/}
-            {/*    <br/>*/}
-            {/*    <br/>*/}
-            {/*</div>*/}
         </div>
     );
 };

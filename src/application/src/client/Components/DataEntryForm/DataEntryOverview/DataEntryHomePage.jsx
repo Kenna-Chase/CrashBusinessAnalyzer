@@ -3,6 +3,7 @@ import {Button, DatePicker, Flex} from "antd";
 import {useNavigate} from "react-router";
 import "../DataEntry.css";
 import DataEntryForm from "./DataEntryForm.jsx";
+import salesCostGrossProfitData from "../FormSections/SalesCostGrossProfit/SalesCostGrossProfitStruct.js";
 
 const DataEntryHome = () => {
     const [yearMonth, setYearMonth] = useState(null);
@@ -16,9 +17,28 @@ const DataEntryHome = () => {
         navigate("/home");
     };
     const [showDataEntry, setShowDataEntry] = useState(null);
+
+    function clearDataInStruct(obj) {
+        // Iterate through each key in the object
+        Object.keys(obj).forEach((key) => {
+            if (typeof obj[key] === "object" && obj[key] !== null) {
+                // If it's an object, recurse into it
+                clearDataInStruct(obj[key]);
+            } else if (key === "value") {
+                // If it's a "value" field, set the data
+                obj[key] = "";
+            }
+        });
+        return obj;
+    }
+
+    function resetDataStructs(){
+        clearDataInStruct(salesCostGrossProfitData);
+    }
     const goToDataEntry = () => {
         console.log("Display Data Entry Form?");
         console.log(yearMonth);
+        resetDataStructs();
         setShowDataEntry(true);
     };
 
