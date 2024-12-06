@@ -114,9 +114,10 @@ const MetricViewPage = () => {
                             <Option value="Sales, Cost, & Gross Profit">
                                 Sales, Cost, & Gross Profit
                             </Option>
-                            <Option value="Labor">Labor</Option>
-                            <Option value="Parts and Materials">Parts and Materials</Option>
-                            <Option value="Other">Other</Option>
+                            {/*<Option value="Supplement to Financial Statement">Supplement to Financial Statement</Option>*/}
+                            {/*<Option value="Balance Sheet">Balance Sheet</Option>*/}
+                            {/*<Option value="Expenses">Expenses</Option>*/}
+                            {/*<Option value="Summary Income Statement">Summary Income Statement</Option>*/}
                         </Select>
                     </Space>
 
