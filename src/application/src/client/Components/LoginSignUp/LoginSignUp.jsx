@@ -55,6 +55,7 @@ const LoginSignUp = () => {
             email: email,
             name: name,
             password: password,
+            company: companyName,
         }
         const requestConfig={
             headers: {

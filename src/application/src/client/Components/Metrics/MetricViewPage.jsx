@@ -9,6 +9,7 @@ import MetricTable from "./Display/MetricTable.jsx";
 
 const { Title, Text } = Typography;
 const { Option } = Select;
+const companyName = AuthService.getUser().company;
 
 const MetricViewPage = () => {
     // Loading view
@@ -51,12 +52,11 @@ const MetricViewPage = () => {
         navigate("/home");
     };
 
-
     async function retrieveMetrics() {
         try {
             console.log("Calling aggregateSalesCostGPRecord...");
-            const result = await aggregateSalesCostGPRecord("TestCompany", yearMonth);
-            console.log("Result from aggregateSalesCostGPRecord:", result); // Logs resolved value
+            const result = await aggregateSalesCostGPRecord(companyName, yearMonth);
+            console.log("Result from aggregateSalesCostGPRecord:", result);
             return result;
         } catch (error) {
             console.error("Error fetching metrics:", error);
@@ -71,13 +71,13 @@ const MetricViewPage = () => {
             const result = await retrieveMetrics();
             // Verify the result
             if (result) {
-                console.log("Metrics Retrieved:", result); // Correctly logs resolved data
+                console.log("Metrics Retrieved:", result);
             } else {
                 console.warn("retrieveMetrics returned null or undefined!");
             }
             // Proceed with state updates
             enterLoading(0);
-            setData(result); // Assuming this updates React state
+            setData(result);
             setDisplayData(true); // Update visibility state
 
             console.log("State updated successfully.");
@@ -98,7 +98,7 @@ const MetricViewPage = () => {
                 <Space direction="vertical" size="large" style={{ width: "60%" }}>
                     <Space align="center" style={{ justifyContent: "space-between", width: "100%" }}>
                         <Text strong> Company Name:</Text>
-                        <Text>TestCompany </Text>
+                        <Text>{companyName}</Text>
                     </Space>
 
                     <Space align="center" style={{ justifyContent: "space-between", width: "100%" }}>
