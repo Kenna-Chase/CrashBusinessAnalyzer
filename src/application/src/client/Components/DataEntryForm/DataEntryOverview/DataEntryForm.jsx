@@ -43,6 +43,34 @@ const DataEntryForm= ({yearMonth}) => {
         saveDataPerSection(section);
     };
 
+    /****** FOR DEMO *******/
+    function fillStructWithData(obj) {
+        // Iterate through each key in the object
+        Object.keys(obj).forEach((key) => {
+            if (typeof obj[key] === "object" && obj[key] !== null) {
+                // If it's an object, recurse into it
+                fillStructWithData(obj[key]);
+            } else if (key === "value") {
+                // If it's a "value" field, set the data
+                obj[key] = randomValue(10,10000);
+            }
+        });
+        return obj;
+    }
+    function randomValue (min, max ) {
+        return parseInt(Math.random() * (max - min) + min);
+    }
+    const demoDataPerSection = (section) => {
+        if(section.toString() === "section3"){
+            console.log("Generating Section 3: Sales Cost GP Data")
+            salesCostGrossProfitData.yearMonth = yearMonth;
+            console.log(salesCostGrossProfitData.yearMonth);
+            fillStructWithData(salesCostGrossProfitData);
+            console.log(salesCostGrossProfitData);
+        }
+    }
+
+    /************/
     const saveDataPerSection = (section) => {
         if(section.toString() === "section3"){
             console.log("Saving Section 3: Sales Cost GP .....")
@@ -138,6 +166,7 @@ const DataEntryForm= ({yearMonth}) => {
                         section={currentSection}
                         content={sectionContent[currentSection]}
                         handleSubmit={handleSubmit}
+                        generateDemoData={demoDataPerSection}
                         goBack={() => setCurrentSection(null)}
                     />)}
 
