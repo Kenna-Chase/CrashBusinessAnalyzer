@@ -9,7 +9,6 @@ import MetricTable from "./Display/MetricTable.jsx";
 
 const { Title, Text } = Typography;
 const { Option } = Select;
-const companyName = AuthService.getUser().company;
 
 const MetricViewPage = () => {
     // Loading view
@@ -36,6 +35,8 @@ const MetricViewPage = () => {
     const [data, setData] = useState(null);
     const [displayData, setDisplayData] = useState(false);
 
+    const companyName = AuthService.getUser().company;
+
     const updateDate = (date, dateString) => {
         console.log("Selected Date:", dateString);
         setYearMonth(dateString);
@@ -43,6 +44,7 @@ const MetricViewPage = () => {
 
     const updateDataSection = (value) => {
         console.log("Selected Data Section:", value);
+        console.log(companyName);
         setDataSection(value);
     };
 
