@@ -10,6 +10,8 @@
     - **Backend**: Powered by various AWS Services including API Gateway and Lambda Functions to handle API requests and business logic.
     - **Database**: Centralized storage using AWS DynamoDB for secure data management.
     - **Hosting**: Deployed on AWS Elastic Beanstalk with CI/CD pipeline to ensure continuous delivery.
+  
+
 ---
 
 ## Flow of Application
@@ -38,6 +40,8 @@
     1. User accesses the data entry dashboard.
     2. Inputs key financial figures such as revenue, costs, and operational expenses.
     3. Submits the data for processing
+
+
 ---
 
 ### 3. Metric Calculation

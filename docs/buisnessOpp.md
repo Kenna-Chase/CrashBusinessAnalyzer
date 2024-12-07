@@ -12,7 +12,6 @@ Typical customers include autobody repair shop owners and managers who needed to
 - Accurate financial performance evaluation
 - Easy-to-understand metrics and reports
 - Automated standardization and data processing
-- Benchmarking against industry peers
 
 Examples of use cases:
 

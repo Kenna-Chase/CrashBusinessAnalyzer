@@ -7,8 +7,7 @@ The Crash Business Analyzer is a business financial performance analysis tool ai
 
 ## Setup 
 ## React Website
-The web application was developed using React and placed in the src/application folder. This folder is extracted as a part of the CodePipeline and deployed.  
-The react website was setup using the inital tutorials for react js. 
+The web application was developed using React and placed in the src/application folder. This folder is extracted as a part of the CodePipeline and deployed. The React website was setup using the inital tutorials for ReactJS. 
 ## CDK Deployment
 Deploying infrastructure with the AWS CDK transforms the code into cloud resources.
 ### 1. **Set Up The Environment**
@@ -50,7 +49,7 @@ cdk bootstrap aws://<ACCOUNT_ID>/<REGION>
 - Rollback or delete your stack if needed using: `cdk destroy` 
 
 ## Continued Development
-After the initial CDK was developed, the CodePipeline was setup, so when the Github Repository main branch is updated it automatically triggers the CodePipeline to update. The CodePipeline will deploy the necessary CDK changes as well as deploy the updated web application from the src/application folder. Any future changes to this repository would automatically deploy and utilize CDK. 
+After the initial CDK was developed, the CodePipeline was setup, so when the Github Repository main branch is updated it automatically triggers the CodePipeline to update. The CodePipeline will deploy the necessary CDK changes as well as deploy the updated web application from the src/application folder. Any future changes to this repository would automatically deploy. 
 
 ## Next Steps
 The next steps for the project are: 
