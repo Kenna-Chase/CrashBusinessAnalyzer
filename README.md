@@ -8,14 +8,15 @@ The Crash Business Analyzer is a business financial performance analysis tool ai
 ## Setup 
 ## React Website
 The web application was developed using React and placed in the src/application folder. This folder is extracted as a part of the CodePipeline and deployed.  
-
+The react website was setup using the inital tutorials for react js. 
 ## CDK Deployment
 Deploying infrastructure with the AWS CDK transforms the code into cloud resources.
 ### 1. **Set Up The Environment**
-- **Install the AWS CDK CLI:**
+- **Install the AWS CDK CLI:  (for Typescript)**
   ```bash
   npm install -g aws-cdk
-  ```  (for Typescript)
+  ```  
+
 
 ### 2. **Define The CDK Stacks**
 - Open the `lib/<name>-stack.ts` file.
@@ -48,6 +49,11 @@ cdk bootstrap aws://<ACCOUNT_ID>/<REGION>
 - To update your stack, make changes to your code and redeploy using `cdk deploy`.
 - Rollback or delete your stack if needed using: `cdk destroy` 
 
-## Development
-After the initial CDK was developed, the CodePipeline was setup, so when the Github Repository main branch is updated it automatically triggers the CodePipeline to update. The CodePipeline will deploy the necessary CDK changes as well as deploy the updated web application from the src/application folder. 
+## Continued Development
+After the initial CDK was developed, the CodePipeline was setup, so when the Github Repository main branch is updated it automatically triggers the CodePipeline to update. The CodePipeline will deploy the necessary CDK changes as well as deploy the updated web application from the src/application folder. Any future changes to this repository would automatically deploy and utilize CDK. 
 
+## Next Steps
+The next steps for the project are: 
+- Generate the metrics that involve all categories of the data entry form, i.e. overall GP %, Total Annual Expenses
+- Implement accumulative tracking and comparisons between the various months of data
+- Explore the utilization of excel spreadsheets to enable better automation of the data entry

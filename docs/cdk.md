@@ -15,6 +15,4 @@ The AWS Cloud Development Kit (CDK) allows for the infrastructure to be defined 
 
 ![CDK Diagram](images/CDKDiagram.png)
 
-...
-
-[Automated Development & Deployment](development.md)
+Each major component of this application was created using a CDK Stack. The Stack then contained the various AWS resource constructs and their associated connections. This allowed for the different services of the application to be developed and updated independently. It also allowed for easy rollback and consistent, repeatable deployments. 
